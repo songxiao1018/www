@@ -1,0 +1,134 @@
+.container {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr 2fr 2fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "图标 选择条目 选择条目 选择条目"
+        "标题 标题 标题 标题"
+        "目录 主体 主体 推荐"
+        "目录 主体 主体 推荐"
+        "底部 底部 底部 底部";
+}
+
+.container选择条目 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas:
+        "知乎 github gitee 相关链接";
+}
+
+/* From www.lingdaima.com */
+.card {
+    width: 190px;
+    height: 254px;
+    background: #26007e;
+    border-radius: 15px;
+    box-shadow: 1px 5px 60px 0px #100a886b;
+}
+
+.card .card-border-top {
+    width: 60%;
+    height: 3%;
+    background: #2d23fa;
+    margin: auto;
+    border-radius: 0px 0px 15px 15px;
+}
+
+.card span {
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    display: block;
+    padding-top: 10px;
+    font-size: 16px;
+}
+
+.card .job {
+    font-weight: 400;
+    color: white;
+    display: block;
+    text-align: center;
+    padding-top: 3px;
+    font-size: 12px;
+}
+
+.card .img {
+    width: 70px;
+    height: 80px;
+    background: #2d23fa;
+    border-radius: 15px;
+    margin: auto;
+    margin-top: 25px;
+}
+
+.card button {
+    padding: 8px 25px;
+    display: block;
+    margin: auto;
+    border-radius: 8px;
+    border: none;
+    margin-top: 30px;
+    background: #2d23fa;
+    color: white;
+    font-weight: 600;
+}
+
+.card button:hover {
+    background: #2117d6;
+}
+
+.知乎 {
+    grid-area: 知乎;
+}
+
+.github {
+    grid-area: github;
+}
+
+.gitee {
+    grid-area: gitee;
+}
+
+.相关链接 {
+    grid-area: 相关链接;
+}
+
+
+.标题 {
+    grid-area: 标题;
+}
+
+.选择条目 {
+    grid-area: 选择条目;
+}
+
+.图标 {
+    grid-area: 图标;
+}
+
+.主体 {
+    grid-area: 主体;
+}
+
+.目录 {
+    grid-area: 目录;
+}
+
+.推荐 {
+    grid-area: 推荐;
+}
+
+.底部 {
+    grid-area: 底部;
+}

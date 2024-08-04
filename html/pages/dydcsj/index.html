@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第一调查 数据自动分析</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
+</head>
+<body>
+    <header class="header">
+        <h1>第一调查 数据自动分析</h1>
+    </header>
+    <div class="container">
+        <div class="statistics-container">
+            <label for="statistics">条目汇总:</label>
+            <div class="box" id="ALL_num">Num</div>
+        </div>
+        <div class="input-container">
+            <label for="inputText">输入内容:</label>
+            <textarea id="inputText" rows="20" placeholder="在此输入文本..." oninput="convertToUpperCase()"></textarea>
+        </div>
+        <div class="output-container">
+            <label for="outputText">转换结果:</label>
+            <textarea id="outputText" rows="20" readonly></textarea>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>版权所有 &copy; 2023 晓之梦</p>
+        <p> <a rel="nofollow" href="http://beian.miit.gov.cn/publish/query/indexFirst.action" target="_blank">苏ICP备2022036199号</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
