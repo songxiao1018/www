@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陆军棋</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- <div class="title">Army Chess</div>
+    <div class="subtitle">Army Chess</div> -->
+
+    <div class="container">
+        <div class="container">
+            <div class="a6"><label id="a6">ds</label><p><button onclick="playChess()">a6</button></p></div>
+            <div class="b6"><label id="b6"></label><button onclick="playChess()">b6</button></div>
+            <div class="c6"><label id="c6"></label><button onclick="playChess()">c6</button></div>
+            <div class="d6"><label id="d6"></label><button onclick="playChess()">d6</button></div>
+            <div class="e6"><label id="e6"></label><button onclick="playChess()">e6</button></div>
+            <div class="a5"><label id="a5"></label><button onclick="playChess()">a5</button></div>
+            <div class="b5"><label id="b5"></label><button onclick="playChess()">b5</button></div>
+            <div class="c5"><label id="c5"></label><button onclick="playChess()">c5</button></div>
+            <div class="d5"><label id="d5"></label><button onclick="playChess()">d5</button></div>
+            <div class="e5"><label id="e5"></label><button onclick="playChess()">e5</button></div>
+            <div class="a4"><label id="a4"></label><button onclick="playChess()">a4</button></div>
+            <div class="b4"><label id="b4"></label><button onclick="playChess()">b4</button></div>
+            <div class="c4"><label id="c4"></label><button onclick="playChess()">c4</button></div>
+            <div class="d4"><label id="d4"></label><button onclick="playChess()">d4</button></div>
+            <div class="e4"><label id="e4"></label><button onclick="playChess()">e4</button></div>
+            <div class="a3"><label id="a3"></label><button onclick="playChess()">a3</button></div>
+            <div class="b3"><label id="b3"></label><button onclick="playChess()">b3</button></div>
+            <div class="c3"><label id="c3"></label><button onclick="playChess()">c3</button></div>
+            <div class="d3"><label id="d3"></label><button onclick="playChess()">d3</button></div>
+            <div class="e3"><label id="e3"></label><button onclick="playChess()">e3</button></div>
+            <div class="a2"><label id="a2"></label><button onclick="playChess()">a2</button></div>
+            <div class="b2"><label id="b2"></label><button onclick="playChess()">b2</button></div>
+            <div class="c2"><label id="c2"></label><button onclick="playChess()">c2</button></div>
+            <div class="d2"><label id="d2"></label><button onclick="playChess()">d2</button></div>
+            <div class="e2"><label id="e2"></label><button onclick="playChess()">e2</button></div>
+            <div class="a1"><label id="a1"></label><button onclick="playChess()">a1</button></div>
+            <div class="b1"><label id="b1"></label><button onclick="playChess()">b1</button></div>
+            <div class="c1"><label id="c1"></label><button onclick="playChess()">c1</button></div>
+            <div class="d1"><label id="d1"></label><button onclick="playChess()">d1</button></div>
+            <div class="e1"><label id="e1"></label><button onclick="playChess()">e1</button></div>
+            <div class="A0"><label id="A0"></label><button onclick="playChess()">A0</button></div>
+            <div class="B0"><label id="B0"></label><button onclick="playChess()">B0</button></div>
+            <div class="C0"><label id="C0"></label><button onclick="playChess()">C0</button></div>
+            <div class="D0"><label id="D0"></label><button onclick="playChess()">D0</button></div>
+            <div class="E0"><label id="E0"></label><button onclick="playChess()">E0</button></div>
+            <div class="A1"><label id="A1"></label><button onclick="playChess()">A1</button></div>
+            <div class="B1"><label id="B1"></label><button onclick="playChess()">B1</button></div>
+            <div class="C1"><label id="C1"></label><button onclick="playChess()">C1</button></div>
+            <div class="D1"><label id="D1"></label><button onclick="playChess()">D1</button></div>
+            <div class="E1"><label id="E1"></label><button onclick="playChess()">E1</button></div>
+            <div class="A2"><label id="A2"></label><button onclick="playChess()">A2</button></div>
+            <div class="B2"><label id="B2"></label><button onclick="playChess()">B2</button></div>
+            <div class="C2"><label id="C2"></label><button onclick="playChess()">C2</button></div>
+            <div class="D2"><label id="D2"></label><button onclick="playChess()">D2</button></div>
+            <div class="E2"><label id="E2"></label><button onclick="playChess()">E2</button></div>
+            <div class="A3"><label id="A3"></label><button onclick="playChess()">A3</button></div>
+            <div class="B3"><label id="B3"></label><button onclick="playChess()">B3</button></div>
+            <div class="C3"><label id="C3"></label><button onclick="playChess()">C3</button></div>
+            <div class="D3"><label id="D3"></label><button onclick="playChess()">D3</button></div>
+            <div class="E3"><label id="E3"></label><button onclick="playChess()">E3</button></div>
+            <div class="A4"><label id="A4"></label><button onclick="playChess()">A4</button></div>
+            <div class="B4"><label id="B4"></label><button onclick="playChess()">B4</button></div>
+            <div class="C4"><label id="C4"></label><button onclick="playChess()">C4</button></div>
+            <div class="D4"><label id="D4"></label><button onclick="playChess()">D4</button></div>
+            <div class="E4"><label id="E4"></label><button onclick="playChess()">E4</button></div>
+            <div class="A5"><label id="A5"></label><button onclick="playChess()">A5</button></div>
+            <div class="B5"><label id="B5"></label><button onclick="playChess()">B5</button></div>
+            <div class="C5"><label id="C5"></label><button onclick="playChess()">C5</button></div>
+            <div class="D5"><label id="D5"></label><button onclick="playChess()">D5</button></div>
+            <div class="E5"><label id="E5"></label><button onclick="playChess()">E5</button></div>
+            <div class="A6"><label id="A6"></label><button onclick="playChess()">A6</button></div>
+            <div class="B6"><label id="B6"></label><button onclick="playChess()">B6</button></div>
+            <div class="C6"><label id="C6"></label><button onclick="playChess()">C6</button></div>
+            <div class="D6"><label id="D6"></label><button onclick="playChess()">D6</button></div>
+            <div class="E6"><label id="E6"></label><button onclick="playChess()">E6</button></div>
+        </div>
+    </div>
+
+    <!-- <div class="container-button">
+        <div class="red">
+            <button onclick="sendRed()">上传红色</button>
+        </div>
+        <div class="black">
+            <button onclick="sendBlack()">上传黑色</button>
+        </div>
+        <div class="input-id">
+            <label for="inputText">输入组队代码:</label>
+            <!-- <textarea id="id" rows="20" placeholder="在此输入文本..." ></textarea> -->
+
+    <!-- <input type="text" id="id" placeholder="请输入内容...">
+        </div>
+        <div class="flag"> -->
+    <!-- <label for="inputText" id="flag">输入组队代码:</label> -->
+    <!-- <p id="flag">请布阵！</p> -->
+    <!-- </div> -->
+    <!-- </div> -->
+
+    <script src="script.js"></script>
+</body>
+
+</html>
