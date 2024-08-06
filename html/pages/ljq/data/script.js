@@ -1,48 +1,48 @@
 // JavaScript函数，用于添加文本到页面
 function getText() {
     // 获取<select>元素
-    var OneA = document.getElementById("OneA"); var OneB = document.getElementById("OneB"); var OneC = document.getElementById("OneC"); var OneD = document.getElementById("OneD"); var OneE = document.getElementById("OneE");
-    var TwoA = document.getElementById("TwoA"); var TwoB = document.getElementById("TwoB"); var TwoC = document.getElementById("TwoC"); var TwoD = document.getElementById("TwoD"); var TwoE = document.getElementById("TwoE");
-    var ThreeA = document.getElementById("ThreeA"); var ThreeB = document.getElementById("ThreeB"); var ThreeC = document.getElementById("ThreeC"); var ThreeD = document.getElementById("ThreeD"); var ThreeE = document.getElementById("ThreeE");
-    var FourA = document.getElementById("FourA"); var FourB = document.getElementById("FourB"); var FourC = document.getElementById("FourC"); var FourD = document.getElementById("FourD"); var FourE = document.getElementById("FourE");
-    var FiveA = document.getElementById("FiveA"); var FiveB = document.getElementById("FiveB"); var FiveC = document.getElementById("FiveC"); var FiveD = document.getElementById("FiveD"); var FiveE = document.getElementById("FiveE");
-    var SixA = document.getElementById("SixA"); var SixB = document.getElementById("SixB"); var SixC = document.getElementById("SixC"); var SixD = document.getElementById("SixD"); var SixE = document.getElementById("SixE");
+    var A1 = document.getElementById("A1"); var B1 = document.getElementById("B1"); var C1 = document.getElementById("C1"); var D1 = document.getElementById("D1"); var E1 = document.getElementById("E1");
+    var A2 = document.getElementById("A2"); var B2 = document.getElementById("B2"); var C2 = document.getElementById("C2"); var D2 = document.getElementById("D2"); var E2 = document.getElementById("E2");
+    var A3 = document.getElementById("A3"); var B3 = document.getElementById("B3"); var C3 = document.getElementById("C3"); var D3 = document.getElementById("D3"); var E3 = document.getElementById("E3");
+    var A4 = document.getElementById("A4"); var B4 = document.getElementById("B4"); var C4 = document.getElementById("C4"); var D4 = document.getElementById("D4"); var E4 = document.getElementById("E4");
+    var A5 = document.getElementById("A5"); var B5 = document.getElementById("B5"); var C5 = document.getElementById("C5"); var D5 = document.getElementById("D5"); var E5 = document.getElementById("E5");
+    var A6 = document.getElementById("A6"); var B6 = document.getElementById("B6"); var C6 = document.getElementById("C6"); var D6 = document.getElementById("D6"); var E6 = document.getElementById("E6");
 
     // var id = document.getElementById('id');
     var id = document.getElementById('id').value;
 
     // 获取选中的<option>元素的值
-    var OneA_Value = OneA.value; var OneB_Value = OneB.value; var OneC_Value = OneC.value; var OneD_Value = OneD.value; var OneE_Value = OneE.value;
-    var TwoA_Value = TwoA.value; var TwoB_Value = TwoB.value; var TwoC_Value = TwoC.value; var TwoD_Value = TwoD.value; var TwoE_Value = TwoE.value;
-    var ThreeA_Value = ThreeA.value; var ThreeB_Value = ThreeB.value; var ThreeC_Value = ThreeC.value; var ThreeD_Value = ThreeD.value; var ThreeE_Value = ThreeE.value;
-    var FourA_Value = FourA.value; var FourB_Value = FourB.value; var FourC_Value = FourC.value; var FourD_Value = FourD.value; var FourE_Value = FourE.value;
-    var FiveA_Value = FiveA.value; var FiveB_Value = FiveB.value; var FiveC_Value = FiveC.value; var FiveD_Value = FiveD.value; var FiveE_Value = FiveE.value;
-    var SixA_Value = SixA.value; var SixB_Value = SixB.value; var SixC_Value = SixC.value; var SixD_Value = SixD.value; var SixE_Value = SixE.value;
+    var A1_Value = A1.value; var B1_Value = B1.value; var C1_Value = C1.value; var D1_Value = D1.value; var E1_Value = E1.value;
+    var A2_Value = A2.value; var B2_Value = B2.value; var C2_Value = C2.value; var D2_Value = D2.value; var E2_Value = E2.value;
+    var A3_Value = A3.value; var B3_Value = B3.value; var C3_Value = C3.value; var D3_Value = D3.value; var E3_Value = E3.value;
+    var A4_Value = A4.value; var B4_Value = B4.value; var C4_Value = C4.value; var D4_Value = D4.value; var E4_Value = E4.value;
+    var A5_Value = A5.value; var B5_Value = B5.value; var C5_Value = C5.value; var D5_Value = D5.value; var E5_Value = E5.value;
+    var A6_Value = A6.value; var B6_Value = B6.value; var C6_Value = C6.value; var D6_Value = D6.value; var E6_Value = E6.value;
 
-    //     SixA_Value,    SixB_Value,   SixC_Value,    SixD_Value,    SixE_Value,
-    //     FiveA_Value,   FiveB_Value,  FiveC_Value,   FiveD_Value,   FiveE_Value,
-    //     FourA_Value,   FourB_Value,  FourC_Value,   FourD_Value,   FourE_Value,
-    //     ThreeA_Value,  ThreeB_Value, ThreeC_Value,  ThreeD_Value,  ThreeE_Value,
-    //     TwoA_Value,    TwoB_Value,   TwoC_Value,    TwoD_Value,    TwoE_Value,
-    //     OneA_Value,    OneB_Value,   OneC_Value,    OneD_Value,    OneE_Value,
+    // A1    // B1    // C1    // D1    // E1
+    // A2    // B2    // C2    // D2    // E2
+    // A3    // B3    // C3    // D3    // E3
+    // A4    // B4    // C4    // D4    // E4
+    // A5    // B5    // C5    // D5    // E5
+    // A6    // B6    // C6    // D6    // E6
 
 
     var chesses = [
-        SixA_Value, SixB_Value, SixC_Value, SixD_Value, SixE_Value,
-        FiveA_Value, FiveB_Value, FiveC_Value, FiveD_Value, FiveE_Value,
-        FourA_Value, FourB_Value, FourC_Value, FourD_Value, FourE_Value,
-        ThreeA_Value, ThreeB_Value, ThreeC_Value, ThreeD_Value, ThreeE_Value,
-        TwoA_Value, TwoB_Value, TwoC_Value, TwoD_Value, TwoE_Value,
-        OneA_Value, OneB_Value, OneC_Value, OneD_Value, OneE_Value,
+        A6_Value, B6_Value, C6_Value, D6_Value, E6_Value,
+        A5_Value, B5_Value, C5_Value, D5_Value, E5_Value,
+        A4_Value, B4_Value, C4_Value, D4_Value, E4_Value,
+        A3_Value, B3_Value, C3_Value, D3_Value, E3_Value,
+        A2_Value, B2_Value, C2_Value, D2_Value, E2_Value,
+        A1_Value, B1_Value, C1_Value, D1_Value, E1_Value,
     ]
 
     board_now =
-        SixA_Value + "," + SixB_Value + "," + SixC_Value + "," + SixD_Value + "," + SixE_Value + "," +
-        FiveA_Value + "," + FiveB_Value + "," + FiveC_Value + "," + FiveD_Value + "," + FiveE_Value + "," +
-        FourA_Value + "," + FourB_Value + "," + FourC_Value + "," + FourD_Value + "," + FourE_Value + "," +
-        ThreeA_Value + "," + ThreeB_Value + "," + ThreeC_Value + "," + ThreeD_Value + "," + ThreeE_Value + "," +
-        TwoA_Value + "," + TwoB_Value + "," + TwoC_Value + "," + TwoD_Value + "," + TwoE_Value + "," +
-        OneA_Value + "," + OneB_Value + "," + OneC_Value + "," + OneD_Value + "," + OneE_Value + ","
+        A6_Value + "," + B6_Value + "," + C6_Value + "," + D6_Value + "," + E6_Value + "," +
+        A5_Value + "," + B5_Value + "," + C5_Value + "," + D5_Value + "," + E5_Value + "," +
+        A4_Value + "," + B4_Value + "," + C4_Value + "," + D4_Value + "," + E4_Value + "," +
+        A3_Value + "," + B3_Value + "," + C3_Value + "," + D3_Value + "," + E3_Value + "," +
+        A2_Value + "," + B2_Value + "," + C2_Value + "," + D2_Value + "," + E2_Value + "," +
+        A1_Value + "," + B1_Value + "," + C1_Value + "," + D1_Value + "," + E1_Value 
 
     // console.log(board_now)
 
@@ -132,12 +132,12 @@ function getText() {
 
     var chess_board_json = {
         "id": id,
-        "1___Six": { "6A": SixA_Value, "6B": SixB_Value, "6C": SixC_Value, "6D": SixD_Value, "6E": SixE_Value, },
-        "2__Five": { "5A": FiveA_Value, "5B": FiveB_Value, "5C": FiveC_Value, "5D": FiveD_Value, "5E": FiveE_Value, },
-        "3__Four": { "4A": FourA_Value, "4B": FourB_Value, "4C": FourC_Value, "4D": FourD_Value, "4E": FourE_Value, },
-        "4_Three": { "3A": ThreeA_Value, "3B": ThreeB_Value, "3C": ThreeC_Value, "3D": ThreeD_Value, "3E": ThreeE_Value },
-        "5___Two": { "2A": TwoA_Value, "2B": TwoB_Value, "2C": TwoC_Value, "2D": TwoD_Value, "2E": TwoE_Value, },
-        "6___One": { "1A": OneA_Value, "1B": OneB_Value, "1C": OneC_Value, "1D": OneD_Value, "1E": OneE_Value, },
+        "1___Six": { "A6": A6_Value, "B6": B6_Value, "C6": C6_Value, "D6": D6_Value, "E6": E6_Value, },
+        "2__Five": { "A5": A5_Value, "B5": B5_Value, "C5": C5_Value, "D5": D5_Value, "E5": E5_Value, },
+        "3__Four": { "A4": A4_Value, "B4": B4_Value, "C4": C4_Value, "D4": D4_Value, "E4": E4_Value, },
+        "4_Three": { "A3": A3_Value, "B3": B3_Value, "C3": C3_Value, "D3": D3_Value, "E3": E3_Value, },
+        "5___Two": { "A2": A2_Value, "B2": B2_Value, "C2": C2_Value, "D2": D2_Value, "E2": E2_Value, },
+        "6___One": { "A1": A1_Value, "B1": B1_Value, "C1": C1_Value, "D1": D1_Value, "E1": E1_Value, },
         "group": "null",
         // "flag": flag_result,
     };
@@ -172,6 +172,12 @@ function sendBlack() {
     sendData(board_txt, id, "black")
 }
 
+function createCookie(id, group, data, expires_time) {
+
+    document.cookie = "key=value; expires=date; path=path; domain=domain; secure";
+    document.cookie = id + "," + group + "=" + data + "; expires=" + expires_time + "; path=/";
+}
+
 function getCookieValue(name) {
     let cookies = document.cookie.split(';');
     for (let i = 0; i < cookies.length; i++) {
@@ -203,7 +209,7 @@ function sendData(data, id, group) {
     // Fri, 27 Mar 2025 00:00:00 GMT
     let expires_time = new Date(time_now.getFullYear() + 1, time_now.getMonth(), time_now.getDate());
 
+    createCookie(id, group, data, expires_time.toUTCString());
 
-    document.cookie = "key=value; expires=date; path=path; domain=domain; secure";
-    document.cookie = id + "," + group + "=" + data + "; expires=" + expires_time + "; path=/";
+
 }
