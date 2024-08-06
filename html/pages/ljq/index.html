@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陆军棋</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="title">Army Chess</div>
+    <div class="subtitle">Army Chess</div>
+    
+    <div class="container">
+
+        <div class="Front">Front</div>
+        <div class="Six">Six</div>
+        <div class="Five">Five</div>
+        <div class="Four">Four</div>
+        <div class="Three">Three</div>
+        <div class="Two">Two</div>
+        <div class="One">One</div>
+        <!-- <div class=".">11</div> -->
+
+        <div class="A">A</div>
+        <div class="B">B</div>
+        <div class="C">C</div>
+        <div class="D">D</div>
+        <div class="E">E</div>
+
+        <!-- <select id=OneA>
+            <option value="--">--</option>
+            <option value="司令">司令</option>
+            <option value="军长">军长</option>
+            <option value="师长">师长</option>
+            <option value="旅长">旅长</option>
+            <option value="团长">团长</option>
+            <option value="营长">营长</option>
+            <option value="连长">连长</option>
+            <option value="排长">排长</option>
+            <option value="工兵">工兵</option>
+            <option value="炸弹">炸弹</option>
+            <option value="地雷">地雷</option>
+            <option value="军旗">军旗</option>
+        </select> -->
+
+        <div class="OneA">
+            兵站
+            <select id="OneA">
+                <option value="----">----</option>
+                <option value="司令">司令</option>
+                <option value="军长">军长</option>
+                <option value="师长">师长</option>
+                <option value="旅长">旅长</option>
+                <option value="团长">团长</option>
+                <option value="营长">营长</option>
+                <option value="连长">连长</option>
+                <option value="排长">排长</option>
+                <option value="工兵">工兵</option>
+                <option value="炸弹">炸弹</option>
+                <option value="地雷">地雷</option>
+                <!-- <option value="军旗">军旗</option> -->
+            </select>
+        </div>
+        <div class="OneB">
+            大本营
+            <select id="OneB">
+                <option value="----">----</option>
+                <option value="司令">司令</option>
+                <option value="军长">军长</option>
+                <option value="师长">师长</option>
+                <option value="旅长">旅长</option>
+                <option value="团长">团长</option>
+                <option value="营长">营长</option>
+                <option value="连长">连长</option>
+                <option value="排长">排长</option>
+                <option value="工兵">工兵</option>
+                <option value="炸弹">炸弹</option>
+                <!-- <option value="地雷">地雷</option> -->
+                <option value="军旗">军旗</option>
+            </select>
+        </div>
+        <div class="OneC">
+            兵站
+            <select id="OneC">
+                <option value="----">----</option>
+                <option value="司令">司令</option>
+                <option value="军长">军长</option>
+                <option value="师长">师长</option>
+                <option value="旅长">旅长</option>
+                <option value="团长">团长</option>
+                <option value="营长">营长</option>
+                <option value="连长">连长</option>
+                <option value="排长">排长</option>
+                <option value="工兵">工兵</option>
+                <option value="炸弹">炸弹</option>
+                <option value="地雷">地雷</option>
+                <!-- <option value="军旗">军旗</option> -->
+            </select>
+        </div>
+        <div class="OneD">
+            大本营
+            <select id="OneD">
+                <option value="----">----</option>
+                <option value="司令">司令</option>
+                <option value="军长">军长</option>
+                <option value="师长">师长</option>
+                <option value="旅长">旅长</option>
+                <option value="团长">团长</option>
+                <option value="营长">营长</option>
+                <option value="连长">连长</option>
+                <option value="排长">排长</option>
+                <option value="工兵">工兵</option>
+                <option value="炸弹">炸弹</option>
+                <!-- <option value="地雷">地雷</option> -->
+                <option value="军旗">军旗</option>
+            </select>
+        </div>
+        <div class="OneE">
+            兵站
+            <select id="OneE">
+                <option value="----">----</option>
+                <option value="司令">司令</option>
+                <option value="军长">军长</option>
+                <option value="师长">师长</option>
+                <option value="旅长">旅长</option>
+                <option value="团长">团长</option>
+                <option value="营长">营长</option>
+                <option value="连长">连长</option>
+                <option value="排长">排长</option>
+                <option value="工兵">工兵</option>
+                <option value="炸弹">炸弹</option>
+                <option value="地雷">地雷</option>
+                <!-- <option value="军旗">军旗</option> -->
+            </select>
+        </div>
+
+        <div class="TwoA">
+            兵站
+            <select id="TwoA">
+                <option value="----">----</option>
+                <option value="司令">司令</option>
+                <option value="军长">军长</option>
+                <option value="师长">师长</option>
+                <option value="旅长">旅长</option>
+                <option value="团长">团长</option>
+                <option value="营长">营长</option>
+                <option value="连长">连长</option>
+                <option value="排长">排长</option>
+                <option value="工兵">工兵</option>
+                <option value="炸弹">炸弹</option>
+                <option value="地雷">地雷</option>
+                <!-- <option value="军旗">军旗</option> -->
+            </select>
+        </div>
+        <div class="TwoB">
+            兵站
+            <select id="TwoB">
+                <option value="----">----</option>
+                <option value="司令">司令</option>
+                <option value="军长">军长</option>
+                <option value="师长">师长</option>
+                <option value="旅长">旅长</option>
+                <option value="团长">团长</option>
+                <option value="营长">营长</option>
+                <option value="连长">连长</option>
+                <option value="排长">排长</option>
+                <option value="工兵">工兵</option>
+                <option value="炸弹">炸弹</option>
+                <option value="地雷">地雷</option>
+                <!-- <option value="军旗">军旗</option> -->
+            </select>
+        </div>
+        <div class="TwoC">
+            兵站
+            <select id="TwoC">
+                <option value="----">----</option>
+                <option value="司令">司令</option>
+                <option value="军长">军长</option>
+                <option value="师长">师长</option>
+                <option value="旅长">旅长</option>
+                <option value="团长">团长</option>
+                <option value="营长">营长</option>
+                <option value="连长">连长</option>
+                <option value="排长">排长</option>
+                <option value="工兵">工兵</option>
+                <option value="炸弹">炸弹</option>
+                <option value="地雷">地雷</option>
+                <!-- <option value="军旗">军旗</option> -->
+            </select>
+        </div>
+        <div class="TwoD">
+            兵站
+            <select id="TwoD">
+                <option value="----">----</option>
+                <option value="司令">司令</option>
+                <option value="军长">军长</option>
+                <option value="师长">师长</option>
+                <option value="旅长">旅长</option>
+                <option value="团长">团长</option>
+                <option value="营长">营长</option>
+                <option value="连长">连长</option>
+                <option value="排长">排长</option>
+                <option value="工兵">工兵</option>
+                <option value="炸弹">炸弹</option>
+                <option value="地雷">地雷</option>
+                <!-- <option value="军旗">军旗</option> -->
+            </select>
+        </div>
+        <div class="TwoE">
+            兵站
+            <select id="TwoE">
+                <option value="----">----</option>
+                <option value="司令">司令</option>
+                <option value="军长">军长</option>
+                <option value="师长">师长</option>
+                <option value="旅长">旅长</option>
+                <option value="团长">团长</option>
+                <option value="营长">营长</option>
+                <option value="连长">连长</option>
+                <option value="排长">排长</option>
+                <option value="工兵">工兵</option>
+                <option value="炸弹">炸弹</option>
+                <option value="地雷">地雷</option>
+                <!-- <option value="军旗">军旗</option> -->
+            </select>
+        </div>
+
+        <div class="ThreeA">
+            兵站
+            <select id="ThreeA">
+                <option value="----">----</option>
+                <option value="司令">司令</option>
+                <option value="军长">军长</option>
+                <option value="师长">师长</option>
+                <option value="旅长">旅长</option>
+                <option value="团长">团长</option>
+                <option value="营长">营长</option>
+                <option value="连长">连长</option>
+                <option value="排长">排长</option>
+                <option value="工兵">工兵</option>
+                <option value="炸弹">炸弹</option>
+                <!-- <option value="地雷">地雷</option>
+                <option value="军旗">军旗</option> -->
+            </select>
+        </div>
+        <div class="ThreeB">
+            行营
+            <select id="ThreeB">
+                <option value="----">----</option>
+                <!-- <option value="司令">司令</option>
+                <option value="军长">军长</option>
+                <option value="师长">师长</option>
+                <option value="旅长">旅长</option>
+                <option value="团长">团长</option>
+                <option value="营长">营长</option>
+                <option value="连长">连长</option>
+                <option value="排长">排长</option>
+                <option value="工兵">工兵</option>
+                <option value="炸弹">炸弹</option>
+                <option value="地雷">地雷</option>
+                <option value="军旗">军旗</option> -->
+            </select>
+        </div>
+        <div class="ThreeC">
+            兵站
+            <select id="ThreeC">
+                <option value="----">----</option>
+                <option value="司令">司令</option>
+                <option value="军长">军长</option>
+                <option value="师长">师长</option>
+                <option value="旅长">旅长</option>
+                <option value="团长">团长</option>
+                <option value="营长">营长</option>
+                <option value="连长">连长</option>
+                <option value="排长">排长</option>
+                <option value="工兵">工兵</option>
+                <option value="炸弹">炸弹</option>
+                <!-- <option value="地雷">地雷</option>
+                <option value="军旗">军旗</option> -->
+            </select>
+        </div>
+        <div class="ThreeD">
+            行营
+            <select id="ThreeD">
+                <option value="----">----</option>
+                <!-- <option value="司令">司令</option>
+                <option value="军长">军长</option>
+                <option value="师长">师长</option>
+                <option value="旅长">旅长</option>
+                <option value="团长">团长</option>
+                <option value="营长">营长</option>
+                <option value="连长">连长</option>
+                <option value="排长">排长</option>
+                <option value="工兵">工兵</option>
+                <option value="炸弹">炸弹</option>
+                <option value="地雷">地雷</option>
+                <option value="军旗">军旗</option> -->
+            </select>
+        </div>
+        <div class="ThreeE">
+            兵站
+            <select id="ThreeE">
+                <option value="----">----</option>
+                <option value="司令">司令</option>
+                <option value="军长">军长</option>
+                <option value="师长">师长</option>
+                <option value="旅长">旅长</option>
+                <option value="团长">团长</option>
+                <option value="营长">营长</option>
+                <option value="连长">连长</option>
+                <option value="排长">排长</option>
+                <option value="工兵">工兵</option>
+                <option value="炸弹">炸弹</option>
+                <!-- <option value="地雷">地雷</option>
+                <option value="军旗">军旗</option> -->
+            </select>
+        </div>
+
+        <div class="FourA">
+            兵站
+            <select id="FourA">
+                <option value="----">----</option>
+                <option value="司令">司令</option>
+                <option value="军长">军长</option>
+                <option value="师长">师长</option>
+                <option value="旅长">旅长</option>
+                <option value="团长">团长</option>
+                <option value="营长">营长</option>
+                <option value="连长">连长</option>
+                <option value="排长">排长</option>
+                <option value="工兵">工兵</option>
+                <option value="炸弹">炸弹</option>
+                <!-- <option value="地雷">地雷</option>
+                <option value="军旗">军旗</option> -->
+            </select>
+        </div>
+        <div class="FourB">
+            兵站
+            <select id="FourB">
+                <option value="----">----</option>
+                <option value="司令">司令</option>
+                <option value="军长">军长</option>
+                <option value="师长">师长</option>
+                <option value="旅长">旅长</option>
+                <option value="团长">团长</option>
+                <option value="营长">营长</option>
+                <option value="连长">连长</option>
+                <option value="排长">排长</option>
+                <option value="工兵">工兵</option>
+                <option value="炸弹">炸弹</option>
+                <!-- <option value="地雷">地雷</option>
+                <option value="军旗">军旗</option> -->
+            </select>
+        </div>
+        <div class="FourC">
+            行营
+            <select id="FourC">
+                <option value="----">----</option>
+                <!-- <option value="司令">司令</option>
+                <option value="军长">军长</option>
+                <option value="师长">师长</option>
+                <option value="旅长">旅长</option>
+                <option value="团长">团长</option>
+                <option value="营长">营长</option>
+                <option value="连长">连长</option>
+                <option value="排长">排长</option>
+                <option value="工兵">工兵</option>
+                <option value="炸弹">炸弹</option>
+                <option value="地雷">地雷</option>
+                <option value="军旗">军旗</option> -->
+            </select>
+        </div>
+        <div class="FourD">
+            兵站
+            <select id="FourD">
+                <option value="----">----</option>
+                <option value="司令">司令</option>
+                <option value="军长">军长</option>
+                <option value="师长">师长</option>
+                <option value="旅长">旅长</option>
+                <option value="团长">团长</option>
+                <option value="营长">营长</option>
+                <option value="连长">连长</option>
+                <option value="排长">排长</option>
+                <option value="工兵">工兵</option>
+                <option value="炸弹">炸弹</option>
+                <!-- <option value="地雷">地雷</option>
+                <option value="军旗">军旗</option> -->
+            </select>
+        </div>
+        <div class="FourE">
+            兵站
+            <select id="FourE">
+                <option value="----">----</option>
+                <option value="司令">司令</option>
+                <option value="军长">军长</option>
+                <option value="师长">师长</option>
+                <option value="旅长">旅长</option>
+                <option value="团长">团长</option>
+                <option value="营长">营长</option>
+                <option value="连长">连长</option>
+                <option value="排长">排长</option>
+                <option value="工兵">工兵</option>
+                <option value="炸弹">炸弹</option>
+                <!-- <option value="地雷">地雷</option>
+                <option value="军旗">军旗</option> -->
+            </select>
+        </div>
+
+        <div class="FiveA">
+            兵站
+            <select id="FiveA">
+                <option value="----">----</option>
+                <option value="司令">司令</option>
+                <option value="军长">军长</option>
+                <option value="师长">师长</option>
+                <option value="旅长">旅长</option>
+                <option value="团长">团长</option>
+                <option value="营长">营长</option>
+                <option value="连长">连长</option>
+                <option value="排长">排长</option>
+                <option value="工兵">工兵</option>
+                <option value="炸弹">炸弹</option>
+                <!-- <option value="地雷">地雷</option>
+                <option value="军旗">军旗</option> -->
+            </select>
+        </div>
+        <div class="FiveB">
+            行营
+            <select id="FiveB">
+                <option value="----">----</option>
+                <!-- <option value="司令">司令</option>
+                <option value="军长">军长</option>
+                <option value="师长">师长</option>
+                <option value="旅长">旅长</option>
+                <option value="团长">团长</option>
+                <option value="营长">营长</option>
+                <option value="连长">连长</option>
+                <option value="排长">排长</option>
+                <option value="工兵">工兵</option>
+                <option value="炸弹">炸弹</option>
+                <option value="地雷">地雷</option>
+                <option value="军旗">军旗</option> -->
+            </select>
+        </div>
+        <div class="FiveC">
+            兵站
+            <select id="FiveC">
+                <option value="----">----</option>
+                <option value="司令">司令</option>
+                <option value="军长">军长</option>
+                <option value="师长">师长</option>
+                <option value="旅长">旅长</option>
+                <option value="团长">团长</option>
+                <option value="营长">营长</option>
+                <option value="连长">连长</option>
+                <option value="排长">排长</option>
+                <option value="工兵">工兵</option>
+                <option value="炸弹">炸弹</option>
+                <!-- <option value="地雷">地雷</option>
+                <option value="军旗">军旗</option> -->
+            </select>
+        </div>
+        <div class="FiveD">
+            行营
+            <select id="FiveD">
+                <option value="----">----</option>
+                <!-- <option value="司令">司令</option>
+                <option value="军长">军长</option>
+                <option value="师长">师长</option>
+                <option value="旅长">旅长</option>
+                <option value="团长">团长</option>
+                <option value="营长">营长</option>
+                <option value="连长">连长</option>
+                <option value="排长">排长</option>
+                <option value="工兵">工兵</option>
+                <option value="炸弹">炸弹</option>
+                <option value="地雷">地雷</option>
+                <option value="军旗">军旗</option> -->
+            </select>
+        </div>
+        <div class="FiveE">
+            兵站
+            <select id="FiveE">
+                <option value="----">----</option>
+                <option value="司令">司令</option>
+                <option value="军长">军长</option>
+                <option value="师长">师长</option>
+                <option value="旅长">旅长</option>
+                <option value="团长">团长</option>
+                <option value="营长">营长</option>
+                <option value="连长">连长</option>
+                <option value="排长">排长</option>
+                <option value="工兵">工兵</option>
+                <option value="炸弹">炸弹</option>
+                <!-- <option value="地雷">地雷</option>
+                <option value="军旗">军旗</option> -->
+            </select>
+        </div>
+
+        <div class="SixA">
+            兵站
+            <select id="SixA">
+                <option value="----">----</option>
+                <option value="司令">司令</option>
+                <option value="军长">军长</option>
+                <option value="师长">师长</option>
+                <option value="旅长">旅长</option>
+                <option value="团长">团长</option>
+                <option value="营长">营长</option>
+                <option value="连长">连长</option>
+                <option value="排长">排长</option>
+                <option value="工兵">工兵</option>
+                <!-- <option value="炸弹">炸弹</option>
+                <option value="地雷">地雷</option>
+                <option value="军旗">军旗</option> -->
+            </select>
+        </div>
+        <div class="SixB">
+            兵站
+            <select id="SixB">
+                <option value="----">----</option>
+                <option value="司令">司令</option>
+                <option value="军长">军长</option>
+                <option value="师长">师长</option>
+                <option value="旅长">旅长</option>
+                <option value="团长">团长</option>
+                <option value="营长">营长</option>
+                <option value="连长">连长</option>
+                <option value="排长">排长</option>
+                <option value="工兵">工兵</option>
+                <!-- <option value="炸弹">炸弹</option>
+                <option value="地雷">地雷</option>
+                <option value="军旗">军旗</option> -->
+            </select>
+        </div>
+        <div class="SixC">
+            兵站
+            <select id="SixC">
+                <option value="----">----</option>
+                <option value="司令">司令</option>
+                <option value="军长">军长</option>
+                <option value="师长">师长</option>
+                <option value="旅长">旅长</option>
+                <option value="团长">团长</option>
+                <option value="营长">营长</option>
+                <option value="连长">连长</option>
+                <option value="排长">排长</option>
+                <option value="工兵">工兵</option>
+                <!-- <option value="炸弹">炸弹</option>
+                <option value="地雷">地雷</option>
+                <option value="军旗">军旗</option> -->
+            </select>
+        </div>
+        <div class="SixD">
+            兵站
+            <select id="SixD">
+                <option value="----">----</option>
+                <option value="司令">司令</option>
+                <option value="军长">军长</option>
+                <option value="师长">师长</option>
+                <option value="旅长">旅长</option>
+                <option value="团长">团长</option>
+                <option value="营长">营长</option>
+                <option value="连长">连长</option>
+                <option value="排长">排长</option>
+                <option value="工兵">工兵</option>
+                <!-- <option value="炸弹">炸弹</option>
+                <option value="地雷">地雷</option>
+                <option value="军旗">军旗</option> -->
+            </select>
+        </div>
+        <div class="SixE">
+            兵站
+            <select id="SixE">
+                <option value="----">----</option>
+                <option value="司令">司令</option>
+                <option value="军长">军长</option>
+                <option value="师长">师长</option>
+                <option value="旅长">旅长</option>
+                <option value="团长">团长</option>
+                <option value="营长">营长</option>
+                <option value="连长">连长</option>
+                <option value="排长">排长</option>
+                <option value="工兵">工兵</option>
+                <!-- <option value="炸弹">炸弹</option>
+                <option value="地雷">地雷</option>
+                <option value="军旗">军旗</option> -->
+            </select>
+        </div>
+
+        <div class="FrontA">
+            前线
+        </div>
+        <div class="FrontC">
+            前线
+        </div>
+        <div class="FrontE">
+            前线
+        </div>
+        <div class="MountainB">
+            大山
+        </div>
+        <div class="MountainD">
+            大山
+        </div>
+        <div class="Null">
+
+        </div>
+    </div>
+
+    <div class="container-button">
+        <div class="red">
+            <button onclick="sendRed()">上传红色</button>
+        </div>
+        <div class="black">
+            <button onclick="sendBlack()">上传黑色</button>
+        </div>
+        <div class="input-id">
+            <label for="inputText">输入组队代码:</label>
+            <!-- <textarea id="id" rows="20" placeholder="在此输入文本..." ></textarea> -->
+
+            <input type="text" id="id" placeholder="请输入内容...">
+        </div>
+        <div class="flag">
+            <!-- <label for="inputText" id="flag">输入组队代码:</label> -->
+            <p id="flag">请布阵！</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
