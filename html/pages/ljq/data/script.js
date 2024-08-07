@@ -211,5 +211,10 @@ function sendData(data, id, group) {
 
     createCookie(id, group, data, expires_time.toUTCString());
 
+    // 等待3秒后，刷新页面
+    setTimeout(function () {
+        location.reload();
+    }, 3000);
+
 
 }
