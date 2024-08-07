@@ -214,7 +214,7 @@ function sendData(data, id, group) {
     // 等待3秒后，刷新页面
     setTimeout(function () {
         location.reload();
-    }, 3000);
+    }, 1000);
 
 
 }

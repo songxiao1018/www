@@ -11,7 +11,7 @@ a {
 .main {
     display: grid;
     grid:
-        "send-button" 150px "chess-board" 600px / 100%;
+        "send-button" 150px "chess-board" 700px / 100%;
     gap: 20px 20px;
 
     width: 100%;
@@ -26,7 +26,13 @@ a {
     grid-area: chess-board;
     display: grid;
     grid:
-        "A0 B0 C0 D0 E0" 65px "A6 B6 C6 D6 E6" 65px "A5 B5 C5 D5 E5" 65px "A4 B4 C4 D4 E4" 65px "A3 B3 C3 D3 E3" 65px "A2 B2 C2 D2 E2" 65px "A1 B1 C1 D1 E1" 65px / 150px 150px 150px 150px 150px;
+        "A0 B0 C0 D0 E0" 75px 
+        "A6 B6 C6 D6 E6" 75px 
+        "A5 B5 C5 D5 E5" 75px 
+        "A4 B4 C4 D4 E4" 75px 
+        "A3 B3 C3 D3 E3" 75px 
+        "A2 B2 C2 D2 E2" 75px 
+        "A1 B1 C1 D1 E1" 75px / 150px 150px 150px 150px 150px;
     gap: 20px 20px;
 
     width: 100%;
@@ -123,6 +129,10 @@ button {
     grid-area: Null;
 }
 
+select{
+    font-size: 30px;
+}
+
 .兵站 {
     background: #2a9fbd;
     /* background-image: -webkit-linear-gradient(top, #5696af, #a83e3e);
@@ -135,13 +145,13 @@ button {
     border-radius: 20px;
     font-family: Arial;
     color: #000000;
-    font-size: 20px;
+    font-size: 30px;
     padding: 17px 30px 40px 30px;
     text-decoration: none;
 }
 
 .行营 {
-    background: #51528f;
+    background: #d88305;
     /* background-image: -webkit-linear-gradient(top, #5696af, #a83e3e);
     background-image: -moz-linear-gradient(top, #43b43f, #333a5e);
     background-image: -ms-linear-gradient(top, #1348ac, #74a372);
