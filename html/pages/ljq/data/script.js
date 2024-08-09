@@ -36,13 +36,7 @@ function getText() {
         A1_Value, B1_Value, C1_Value, D1_Value, E1_Value,
     ]
 
-    board_now =
-        A6_Value + "," + B6_Value + "," + C6_Value + "," + D6_Value + "," + E6_Value + "," +
-        A5_Value + "," + B5_Value + "," + C5_Value + "," + D5_Value + "," + E5_Value + "," +
-        A4_Value + "," + B4_Value + "," + C4_Value + "," + D4_Value + "," + E4_Value + "," +
-        A3_Value + "," + B3_Value + "," + C3_Value + "," + D3_Value + "," + E3_Value + "," +
-        A2_Value + "," + B2_Value + "," + C2_Value + "," + D2_Value + "," + E2_Value + "," +
-        A1_Value + "," + B1_Value + "," + C1_Value + "," + D1_Value + "," + E1_Value 
+    board_now =chesses.join(",");
 
     // console.log(board_now)
 
@@ -209,7 +203,12 @@ function sendData(data, id, group) {
 
     flag.innerHTML = "上传成功！";
 
-    createCookie("chess_board," + id + "," + group, data);
+    data_re = data.split(",")
+    for (var i = 0; i < data_re.length; i++) {
+        data_re[i] = group + " " + data_re[i];
+    }
+
+    createCookie("chess_board," + id + "," + group, data_re.join(","));
 
     // 等待3秒后，刷新页面
     setTimeout(function () {

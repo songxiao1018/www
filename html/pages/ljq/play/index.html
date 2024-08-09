@@ -24,7 +24,7 @@
                 <label id="flag" onclick="getChessBoard()">读取阵型！</label>
             </div>
             <div class="front">
-                <button onclick="refront()">点击改变字体大小</button>
+                <button id="front" onclick="refront()">点击改变字体大小</button>
             </div>
         </div>
 
@@ -34,70 +34,70 @@
             <div class="C0 前线"></div>
             <div class="D0 大山"></div>
             <div class="E0 前线"></div>
-            <div class="a1 兵站"><button class="myChess" id="a1" onclick="playChess('a1')">black a1</button></div>
-            <div class="b1 大本"><button class="myChess" id="b1" onclick="playChess('b1')">black b1</button></div>
-            <div class="c1 兵站"><button class="myChess" id="c1" onclick="playChess('c1')">black c1</button></div>
-            <div class="d1 大本"><button class="myChess" id="d1" onclick="playChess('d1')">black d1</button></div>
-            <div class="e1 兵站"><button class="myChess" id="e1" onclick="playChess('e1')">black e1</button></div>
-            <div class="a2 兵站"><button class="myChess" id="a2" onclick="playChess('a2')">black a2</button></div>
-            <div class="b2 兵站"><button class="myChess" id="b2" onclick="playChess('b2')">black b2</button></div>
-            <div class="c2 兵站"><button class="myChess" id="c2" onclick="playChess('c2')">black c2</button></div>
-            <div class="d2 兵站"><button class="myChess" id="d2" onclick="playChess('d2')">black d2</button></div>
-            <div class="e2 兵站"><button class="myChess" id="e2" onclick="playChess('e2')">black e2</button></div>
-            <div class="a3 兵站"><button class="myChess" id="a3" onclick="playChess('a3')">black a3</button></div>
-            <div class="b3 行营"><button class="myChess" id="b3" onclick="playChess('b3')">black b3</button></div>
-            <div class="c3 兵站"><button class="myChess" id="c3" onclick="playChess('c3')">black c3</button></div>
-            <div class="d3 行营"><button class="myChess" id="d3" onclick="playChess('d3')">black d3</button></div>
-            <div class="e3 兵站"><button class="myChess" id="e3" onclick="playChess('e3')">black e3</button></div>
-            <div class="a4 兵站"><button class="myChess" id="a4" onclick="playChess('a4')">black a4</button></div>
-            <div class="b4 兵站"><button class="myChess" id="b4" onclick="playChess('b4')">black b4</button></div>
-            <div class="c4 行营"><button class="myChess" id="c4" onclick="playChess('c4')">black c4</button></div>
-            <div class="d4 兵站"><button class="myChess" id="d4" onclick="playChess('d4')">black d4</button></div>
-            <div class="e4 兵站"><button class="myChess" id="e4" onclick="playChess('e4')">black e4</button></div>
-            <div class="a5 兵站"><button class="myChess" id="a5" onclick="playChess('a5')">black a5</button></div>
-            <div class="b5 行营"><button class="myChess" id="b5" onclick="playChess('b5')">black b5</button></div>
-            <div class="c5 兵站"><button class="myChess" id="c5" onclick="playChess('c5')">black c5</button></div>
-            <div class="d5 行营"><button class="myChess" id="d5" onclick="playChess('d5')">black d5</button></div>
-            <div class="e5 兵站"><button class="myChess" id="e5" onclick="playChess('e5')">black e5</button></div>
-            <div class="a6 兵站"><button class="myChess" id="a6" onclick="playChess('a6')">black a6</button></div>
-            <div class="b6 兵站"><button class="myChess" id="b6" onclick="playChess('b6')">black b6</button></div>
-            <div class="c6 兵站"><button class="myChess" id="c6" onclick="playChess('c6')">black c6</button></div>
-            <div class="d6 兵站"><button class="myChess" id="d6" onclick="playChess('d6')">black d6</button></div>
-            <div class="e6 兵站"><button class="myChess" id="e6" onclick="playChess('e6')">black e6</button></div>
-            <div class="A6 兵站"><button class="myChess" id="A6" onclick="playChess('A6')">red A6</button></div>
-            <div class="B6 兵站"><button class="myChess" id="B6" onclick="playChess('B6')">red B6</button></div>
-            <div class="C6 兵站"><button class="myChess" id="C6" onclick="playChess('C6')">red C6</button></div>
-            <div class="D6 兵站"><button class="myChess" id="D6" onclick="playChess('D6')">red D6</button></div>
-            <div class="E6 兵站"><button class="myChess" id="E6" onclick="playChess('E6')">red E6</button></div>
-            <div class="A5 兵站"><button class="myChess" id="A5" onclick="playChess('A5')">red A5</button></div>
-            <div class="B5 行营"><button class="myChess" id="B5" onclick="playChess('B5')">red B5</button></div>
-            <div class="C5 兵站"><button class="myChess" id="C5" onclick="playChess('C5')">red C5</button></div>
-            <div class="D5 行营"><button class="myChess" id="D5" onclick="playChess('D5')">red D5</button></div>
-            <div class="E5 兵站"><button class="myChess" id="E5" onclick="playChess('E5')">red E5</button></div>
-            <div class="A4 兵站"><button class="myChess" id="A4" onclick="playChess('A4')">red A4</button></div>
-            <div class="B4 兵站"><button class="myChess" id="B4" onclick="playChess('B4')">red B4</button></div>
-            <div class="C4 行营"><button class="myChess" id="C4" onclick="playChess('C4')">red C4</button></div>
-            <div class="D4 兵站"><button class="myChess" id="D4" onclick="playChess('D4')">red D4</button></div>
-            <div class="E4 兵站"><button class="myChess" id="E4" onclick="playChess('E4')">red E4</button></div>
-            <div class="A3 兵站"><button class="myChess" id="A3" onclick="playChess('A3')">red A3</button></div>
-            <div class="B3 行营"><button class="myChess" id="B3" onclick="playChess('B3')">red B3</button></div>
-            <div class="C3 兵站"><button class="myChess" id="C3" onclick="playChess('C3')">red C3</button></div>
-            <div class="D3 行营"><button class="myChess" id="D3" onclick="playChess('D3')">red D3</button></div>
-            <div class="E3 兵站"><button class="myChess" id="E3" onclick="playChess('E3')">red E3</button></div>
-            <div class="A2 兵站"><button class="myChess" id="A2" onclick="playChess('A2')">red A2</button></div>
-            <div class="B2 兵站"><button class="myChess" id="B2" onclick="playChess('B2')">red B2</button></div>
-            <div class="C2 兵站"><button class="myChess" id="C2" onclick="playChess('C2')">red C2</button></div>
-            <div class="D2 兵站"><button class="myChess" id="D2" onclick="playChess('D2')">red D2</button></div>
-            <div class="E2 兵站"><button class="myChess" id="E2" onclick="playChess('E2')">red E2</button></div>
-            <div class="A1 兵站"><button class="myChess" id="A1" onclick="playChess('A1')">red A1</button></div>
-            <div class="B1 大本"><button class="myChess" id="B1" onclick="playChess('B1')">red B1</button></div>
-            <div class="C1 兵站"><button class="myChess" id="C1" onclick="playChess('C1')">red C1</button></div>
-            <div class="D1 大本"><button class="myChess" id="D1" onclick="playChess('D1')">red D1</button></div>
-            <div class="E1 兵站"><button class="myChess" id="E1" onclick="playChess('E1')">red E1</button></div>
+            <div class="a1"><button class="myChess 兵站" id="a1" name="none" onclick="playChess('a1')" style="display: none;">black_a1</button><button class="myChess 兵站" id="a1-none" onclick="playChess('a1')">a1</button></div>
+            <div class="b1"><button class="myChess 大本" id="b1" name="none" onclick="playChess('b1')" style="display: none;">black_b1</button><button class="myChess 大本" id="b1-none" onclick="playChess('b1')">b1</button></div>
+            <div class="c1"><button class="myChess 兵站" id="c1" name="none" onclick="playChess('c1')" style="display: none;">black_c1</button><button class="myChess 兵站" id="c1-none" onclick="playChess('c1')">c1</button></div>
+            <div class="d1"><button class="myChess 大本" id="d1" name="none" onclick="playChess('d1')" style="display: none;">black_d1</button><button class="myChess 大本" id="d1-none" onclick="playChess('d1')">d1</button></div>
+            <div class="e1"><button class="myChess 兵站" id="e1" name="none" onclick="playChess('e1')" style="display: none;">black_e1</button><button class="myChess 兵站" id="e1-none" onclick="playChess('e1')">e1</button></div>
+            <div class="a2"><button class="myChess 兵站" id="a2" name="none" onclick="playChess('a2')" style="display: none;">black_a2</button><button class="myChess 兵站" id="a2-none" onclick="playChess('a2')">a2</button></div>
+            <div class="b2"><button class="myChess 兵站" id="b2" name="none" onclick="playChess('b2')" style="display: none;">black_b2</button><button class="myChess 兵站" id="b2-none" onclick="playChess('b2')">b2</button></div>
+            <div class="c2"><button class="myChess 兵站" id="c2" name="none" onclick="playChess('c2')" style="display: none;">black_c2</button><button class="myChess 兵站" id="c2-none" onclick="playChess('c2')">c2</button></div>
+            <div class="d2"><button class="myChess 兵站" id="d2" name="none" onclick="playChess('d2')" style="display: none;">black_d2</button><button class="myChess 兵站" id="d2-none" onclick="playChess('d2')">d2</button></div>
+            <div class="e2"><button class="myChess 兵站" id="e2" name="none" onclick="playChess('e2')" style="display: none;">black_e2</button><button class="myChess 兵站" id="e2-none" onclick="playChess('e2')">e2</button></div>
+            <div class="a3"><button class="myChess 兵站" id="a3" name="none" onclick="playChess('a3')" style="display: none;">black_a3</button><button class="myChess 兵站" id="a3-none" onclick="playChess('a3')">a3</button></div>
+            <div class="b3"><button class="myChess 行营" id="b3" name="none" onclick="playChess('b3')" style="display: none;">black_b3</button><button class="myChess 行营" id="b3-none" onclick="playChess('b3')">b3</button></div>
+            <div class="c3"><button class="myChess 兵站" id="c3" name="none" onclick="playChess('c3')" style="display: none;">black_c3</button><button class="myChess 兵站" id="c3-none" onclick="playChess('c3')">c3</button></div>
+            <div class="d3"><button class="myChess 行营" id="d3" name="none" onclick="playChess('d3')" style="display: none;">black_d3</button><button class="myChess 行营" id="d3-none" onclick="playChess('d3')">d3</button></div>
+            <div class="e3"><button class="myChess 兵站" id="e3" name="none" onclick="playChess('e3')" style="display: none;">black_e3</button><button class="myChess 兵站" id="e3-none" onclick="playChess('e3')">e3</button></div>
+            <div class="a4"><button class="myChess 兵站" id="a4" name="none" onclick="playChess('a4')" style="display: none;">black_a4</button><button class="myChess 兵站" id="a4-none" onclick="playChess('a4')">a4</button></div>
+            <div class="b4"><button class="myChess 兵站" id="b4" name="none" onclick="playChess('b4')" style="display: none;">black_b4</button><button class="myChess 兵站" id="b4-none" onclick="playChess('b4')">b4</button></div>
+            <div class="c4"><button class="myChess 行营" id="c4" name="none" onclick="playChess('c4')" style="display: none;">black_c4</button><button class="myChess 行营" id="c4-none" onclick="playChess('c4')">c4</button></div>
+            <div class="d4"><button class="myChess 兵站" id="d4" name="none" onclick="playChess('d4')" style="display: none;">black_d4</button><button class="myChess 兵站" id="d4-none" onclick="playChess('d4')">d4</button></div>
+            <div class="e4"><button class="myChess 兵站" id="e4" name="none" onclick="playChess('e4')" style="display: none;">black_e4</button><button class="myChess 兵站" id="e4-none" onclick="playChess('e4')">e4</button></div>
+            <div class="a5"><button class="myChess 兵站" id="a5" name="none" onclick="playChess('a5')" style="display: none;">black_a5</button><button class="myChess 兵站" id="a5-none" onclick="playChess('a5')">a5</button></div>
+            <div class="b5"><button class="myChess 行营" id="b5" name="none" onclick="playChess('b5')" style="display: none;">black_b5</button><button class="myChess 行营" id="b5-none" onclick="playChess('b5')">b5</button></div>
+            <div class="c5"><button class="myChess 兵站" id="c5" name="none" onclick="playChess('c5')" style="display: none;">black_c5</button><button class="myChess 兵站" id="c5-none" onclick="playChess('c5')">c5</button></div>
+            <div class="d5"><button class="myChess 行营" id="d5" name="none" onclick="playChess('d5')" style="display: none;">black_d5</button><button class="myChess 行营" id="d5-none" onclick="playChess('d5')">d5</button></div>
+            <div class="e5"><button class="myChess 兵站" id="e5" name="none" onclick="playChess('e5')" style="display: none;">black_e5</button><button class="myChess 兵站" id="e5-none" onclick="playChess('e5')">e5</button></div>
+            <div class="a6"><button class="myChess 兵站" id="a6" name="none" onclick="playChess('a6')" style="display: none;">black_a6</button><button class="myChess 兵站" id="a6-none" onclick="playChess('a6')">a6</button></div>
+            <div class="b6"><button class="myChess 兵站" id="b6" name="none" onclick="playChess('b6')" style="display: none;">black_b6</button><button class="myChess 兵站" id="b6-none" onclick="playChess('b6')">b6</button></div>
+            <div class="c6"><button class="myChess 兵站" id="c6" name="none" onclick="playChess('c6')" style="display: none;">black_c6</button><button class="myChess 兵站" id="c6-none" onclick="playChess('c6')">c6</button></div>
+            <div class="d6"><button class="myChess 兵站" id="d6" name="none" onclick="playChess('d6')" style="display: none;">black_d6</button><button class="myChess 兵站" id="d6-none" onclick="playChess('d6')">d6</button></div>
+            <div class="e6"><button class="myChess 兵站" id="e6" name="none" onclick="playChess('e6')" style="display: none;">black_e6</button><button class="myChess 兵站" id="e6-none" onclick="playChess('e6')">e6</button></div>
+            <div class="A6"><button class="myChess 兵站" id="A6" name="none" onclick="playChess('A6')" style="display: none;">red___A6</button><button class="myChess 兵站" id="A6-none" onclick="playChess('A6')">A6</button></div>
+            <div class="B6"><button class="myChess 兵站" id="B6" name="none" onclick="playChess('B6')" style="display: none;">red___B6</button><button class="myChess 兵站" id="B6-none" onclick="playChess('B6')">B6</button></div>
+            <div class="C6"><button class="myChess 兵站" id="C6" name="none" onclick="playChess('C6')" style="display: none;">red___C6</button><button class="myChess 兵站" id="C6-none" onclick="playChess('C6')">C6</button></div>
+            <div class="D6"><button class="myChess 兵站" id="D6" name="none" onclick="playChess('D6')" style="display: none;">red___D6</button><button class="myChess 兵站" id="D6-none" onclick="playChess('D6')">D6</button></div>
+            <div class="E6"><button class="myChess 兵站" id="E6" name="none" onclick="playChess('E6')" style="display: none;">red___E6</button><button class="myChess 兵站" id="E6-none" onclick="playChess('E6')">E6</button></div>
+            <div class="A5"><button class="myChess 兵站" id="A5" name="none" onclick="playChess('A5')" style="display: none;">red___A5</button><button class="myChess 兵站" id="A5-none" onclick="playChess('A5')">A5</button></div>
+            <div class="B5"><button class="myChess 行营" id="B5" name="none" onclick="playChess('B5')" style="display: none;">red___B5</button><button class="myChess 行营" id="B5-none" onclick="playChess('B5')">B5</button></div>
+            <div class="C5"><button class="myChess 兵站" id="C5" name="none" onclick="playChess('C5')" style="display: none;">red___C5</button><button class="myChess 兵站" id="C5-none" onclick="playChess('C5')">C5</button></div>
+            <div class="D5"><button class="myChess 行营" id="D5" name="none" onclick="playChess('D5')" style="display: none;">red___D5</button><button class="myChess 行营" id="D5-none" onclick="playChess('D5')">D5</button></div>
+            <div class="E5"><button class="myChess 兵站" id="E5" name="none" onclick="playChess('E5')" style="display: none;">red___E5</button><button class="myChess 兵站" id="E5-none" onclick="playChess('E5')">E5</button></div>
+            <div class="A4"><button class="myChess 兵站" id="A4" name="none" onclick="playChess('A4')" style="display: none;">red___A4</button><button class="myChess 兵站" id="A4-none" onclick="playChess('A4')">A4</button></div>
+            <div class="B4"><button class="myChess 兵站" id="B4" name="none" onclick="playChess('B4')" style="display: none;">red___B4</button><button class="myChess 兵站" id="B4-none" onclick="playChess('B4')">B4</button></div>
+            <div class="C4"><button class="myChess 行营" id="C4" name="none" onclick="playChess('C4')" style="display: none;">red___C4</button><button class="myChess 行营" id="C4-none" onclick="playChess('C4')">C4</button></div>
+            <div class="D4"><button class="myChess 兵站" id="D4" name="none" onclick="playChess('D4')" style="display: none;">red___D4</button><button class="myChess 兵站" id="D4-none" onclick="playChess('D4')">D4</button></div>
+            <div class="E4"><button class="myChess 兵站" id="E4" name="none" onclick="playChess('E4')" style="display: none;">red___E4</button><button class="myChess 兵站" id="E4-none" onclick="playChess('E4')">E4</button></div>
+            <div class="A3"><button class="myChess 兵站" id="A3" name="none" onclick="playChess('A3')" style="display: none;">red___A3</button><button class="myChess 兵站" id="A3-none" onclick="playChess('A3')">A3</button></div>
+            <div class="B3"><button class="myChess 行营" id="B3" name="none" onclick="playChess('B3')" style="display: none;">red___B3</button><button class="myChess 行营" id="B3-none" onclick="playChess('B3')">B3</button></div>
+            <div class="C3"><button class="myChess 兵站" id="C3" name="none" onclick="playChess('C3')" style="display: none;">red___C3</button><button class="myChess 兵站" id="C3-none" onclick="playChess('C3')">C3</button></div>
+            <div class="D3"><button class="myChess 行营" id="D3" name="none" onclick="playChess('D3')" style="display: none;">red___D3</button><button class="myChess 行营" id="D3-none" onclick="playChess('D3')">D3</button></div>
+            <div class="E3"><button class="myChess 兵站" id="E3" name="none" onclick="playChess('E3')" style="display: none;">red___E3</button><button class="myChess 兵站" id="E3-none" onclick="playChess('E3')">E3</button></div>
+            <div class="A2"><button class="myChess 兵站" id="A2" name="none" onclick="playChess('A2')" style="display: none;">red___A2</button><button class="myChess 兵站" id="A2-none" onclick="playChess('A2')">A2</button></div>
+            <div class="B2"><button class="myChess 兵站" id="B2" name="none" onclick="playChess('B2')" style="display: none;">red___B2</button><button class="myChess 兵站" id="B2-none" onclick="playChess('B2')">B2</button></div>
+            <div class="C2"><button class="myChess 兵站" id="C2" name="none" onclick="playChess('C2')" style="display: none;">red___C2</button><button class="myChess 兵站" id="C2-none" onclick="playChess('C2')">C2</button></div>
+            <div class="D2"><button class="myChess 兵站" id="D2" name="none" onclick="playChess('D2')" style="display: none;">red___D2</button><button class="myChess 兵站" id="D2-none" onclick="playChess('D2')">D2</button></div>
+            <div class="E2"><button class="myChess 兵站" id="E2" name="none" onclick="playChess('E2')" style="display: none;">red___E2</button><button class="myChess 兵站" id="E2-none" onclick="playChess('E2')">E2</button></div>
+            <div class="A1"><button class="myChess 兵站" id="A1" name="none" onclick="playChess('A1')" style="display: none;">red___A1</button><button class="myChess 兵站" id="A1-none" onclick="playChess('A1')">A1</button></div>
+            <div class="B1"><button class="myChess 大本" id="B1" name="none" onclick="playChess('B1')" style="display: none;">red___B1</button><button class="myChess 大本" id="B1-none" onclick="playChess('B1')">B1</button></div>
+            <div class="C1"><button class="myChess 兵站" id="C1" name="none" onclick="playChess('C1')" style="display: none;">red___C1</button><button class="myChess 兵站" id="C1-none" onclick="playChess('C1')">C1</button></div>
+            <div class="D1"><button class="myChess 大本" id="D1" name="none" onclick="playChess('D1')" style="display: none;">red___D1</button><button class="myChess 大本" id="D1-none" onclick="playChess('D1')">D1</button></div>
+            <div class="E1"><button class="myChess 兵站" id="E1" name="none" onclick="playChess('E1')" style="display: none;">red___E1</button><button class="myChess 兵站" id="E1-none" onclick="playChess('E1')">E1</button></div>
         </div>
     </div>
 
-    <style id="style">.myChess { font-size: 1px; }</style>
+    <!-- <style id="style">.myChess {}</style> -->
 
 
     <footer class="footer">

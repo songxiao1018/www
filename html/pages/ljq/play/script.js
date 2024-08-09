@@ -63,12 +63,17 @@ function getChessBoard() {
 
     console.log(chess_list);
 
-    // console.log(red_chess);
-    // console.log(black_chess);
-    // console.log(board_chess);
-
     for (let i = 0; i < board_chess.length; i++) {
-        board_chess[i].innerHTML = chess_list[i];
+        let group = chess_list[i].split(" ")[0];
+        let chess = chess_list[i].split(" ")[1];
+
+        if (chess == "----") {
+            board_chess[i].name = "none";
+            board_chess[i].innerHTML = " ";
+        } else {
+            board_chess[i].name = group;
+            board_chess[i].innerHTML = chess;
+        }
     }
 
 }
@@ -85,13 +90,27 @@ function playChess(area) {
     let last_time = getCookieValue("play,0")
 
     if (last_time === "") {
-        createCookie("play,0", area + "," + arer_lbe.innerHTML);
+        createCookie("play,0", area + "," + arer_lbe.innerHTML + "," + arer_lbe.name);
         flag.innerHTML = "已选棋";
         console.log("已选棋");
         return;
     }
 
     console.log("开始比对！");
+
+    // 排除重复点击
+    if(last_time.split(",")[0] == area) {
+        flag.innerHTML = "已选棋";
+        return;
+    }
+    // 自己人跟换
+    if (arer_lbe.name == last_time.split(",")[2]) {
+        createCookie("play,0", area + "," + arer_lbe.innerHTML + "," + arer_lbe.name);
+        flag.innerHTML = "已选棋";
+        console.log("已选棋");
+        return;
+    }
+
     flag.innerHTML = "已选棋";
     console.log(last_time);
 
@@ -132,7 +151,8 @@ function playChess(area) {
     let this_ = document.getElementById(this_area);
 
     // 清空原始位置
-    last_.innerHTML = "----";
+    last_.innerHTML = " ";
+    last_.name = "none";
     // 比对棋子
     let flag_win = 0;
     if (last_chess > this_chess) {
@@ -158,9 +178,11 @@ function playChess(area) {
     // 更新现在位置
     if (flag_win == 1) {
         this_.innerHTML = last_time.split(",")[1];
+        this_.name = last_time.split(",")[2];
         flag.innerHTML = "胜利";
     } else if (flag_win == 0) {
-        this_.innerHTML = "----";
+        this_.innerHTML = " ";
+        this_.name = "none";
         flag.innerHTML = "同归于尽";
     } else if (flag_win == -1) {
         // this_.innerHTML = last_time.split(",")[1];
@@ -171,29 +193,41 @@ function playChess(area) {
 }
 
 function refront() {
-    let style = document.getElementById("style");
+    // let style = document.getElementById("style");
 
-    console.log(style.innerHTML);
+    // console.log(style.innerHTML);
 
-    let size = style.innerHTML.split(" ");
+    // let size = style.innerHTML.split(" ");
 
-    console.log(size);
+    // let size_now = size[3]
 
-    let size_now = size[3]
+    // if (size_now == "10px;") {
+    //     style.innerHTML = ".myChess { font-size: 20px; }";
+    // } else {
+    //     style.innerHTML = ".myChess { font-size: 10px; }";
+    // }
 
-    console.log(size_now);
-
-    if (size_now == "1px;") {
-        style.innerHTML = ".myChess { font-size: 20px; }";
-    } else {
-        style.innerHTML = ".myChess { font-size: 1px; }";
+    let char_list = ["A", "B", "C", "D", "E","a", "b", "c", "d", "e"];
+    let num_list = ["6", "5", "4", "3", "2", "1"];
+    let display_chess = [];
+    let none_chess = [];
+    for (let i = 0; i < num_list.length; i++) {
+        for (let j = 0; j < char_list.length; j++) {
+            display_chess.push(document.getElementById(char_list[j] + num_list[i]));
+            none_chess.push(document.getElementById(char_list[j] + num_list[i] + "-none"));
+        }
     }
 
-    size = style.innerHTML.split(" ");
+    console.log(display_chess);
+    console.log(none_chess);
 
-    console.log(size);
-
-    size_now = size[3]
-
-    console.log(size_now);
+    for (let i = 0; i < display_chess.length; i++) {
+        if (display_chess[i].style.display === 'none') {
+            display_chess[i].style.display = 'inline';  // 显示文本1
+            none_chess[i].style.display = 'none';   // 隐藏文本2
+        } else {
+            display_chess[i].style.display = 'none';   // 隐藏文本1
+            none_chess[i].style.display = 'inline'; // 显示文本2
+        }
+    }
 }
