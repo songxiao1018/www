@@ -89,6 +89,17 @@ label {
     border-radius: 4px;
 }
 
+.myChess {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    font-family: Arial;
+    color: #000000;
+    font-size: 20px;
+    border-radius: 4px;
+
+}
+
 body {
     background: rgb(153, 151, 103);
     background: linear-gradient(151deg, rgba(153, 151, 103, 1) 15%, rgba(145, 209, 205, 1) 49%, rgba(214, 183, 212, 1) 87%);
@@ -119,8 +130,9 @@ a {
     border-radius: 20px;
     font-family: Arial;
     color: #000000;
-    font-size: 20px;
-    padding: 15px 15px 15px 15px ;
+    font-size: 30px;
+    Font-weight: bold;
+    padding: 0px 0px 0px 0px ;
     text-decoration: none;
 }
 .行营 {
@@ -135,8 +147,9 @@ a {
     border-radius: 20px;
     font-family: Arial;
     color: #000000;
-    font-size: 20px;
-    padding: 15px 15px 15px 15px ;
+    font-size: 30px;
+    Font-weight: bold;
+    padding: 0px 0px 0px 0px ;
     text-decoration: none;
 }
 .大本营 {
@@ -151,8 +164,9 @@ a {
     border-radius: 20px;
     font-family: Arial;
     color: #000000;
-    font-size: 20px;
-    padding: 15px 15px 15px 15px ;
+    font-size: 30px;
+    Font-weight: bold;
+    padding: 0px 0px 0px 0px ;
     text-decoration: none;
 }
 .前线 {

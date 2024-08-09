@@ -172,10 +172,17 @@ function sendBlack() {
     sendData(board_txt, id, "black")
 }
 
-function createCookie(id, group, data, expires_time) {
+function createCookie(id, data) {
+    let time_now = new Date();
+
+    console.log(time_now);
+
+    // Fri, 27 Mar 2025 00:00:00 GMT
+    let expires_time = new Date(time_now.getFullYear() + 1, time_now.getMonth(), time_now.getDate());
+    expires_time = expires_time.toUTCString()
 
     document.cookie = "key=value; expires=date; path=path; domain=domain; secure";
-    document.cookie = id + "," + group + "=" + data + "; expires=" + expires_time + "; path=/";
+    document.cookie = id + "=" + data + "; expires=" + expires_time + "; path=/";
 }
 
 function getCookieValue(name) {
@@ -202,14 +209,7 @@ function sendData(data, id, group) {
 
     flag.innerHTML = "上传成功！";
 
-    let time_now = new Date();
-
-    console.log(time_now);
-
-    // Fri, 27 Mar 2025 00:00:00 GMT
-    let expires_time = new Date(time_now.getFullYear() + 1, time_now.getMonth(), time_now.getDate());
-
-    createCookie(id, group, data, expires_time.toUTCString());
+    createCookie("chess_board," + id + "," + group, data);
 
     // 等待3秒后，刷新页面
     setTimeout(function () {
