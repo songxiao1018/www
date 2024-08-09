@@ -76,6 +76,8 @@ function getChessBoard() {
 function playChess(area) {
     // console.log(area);
 
+    let flag = document.getElementById("flag");
+
     let arer_lbe = document.getElementById(area);
 
     // console.log(arer_lbe.innerHTML);
@@ -84,11 +86,13 @@ function playChess(area) {
 
     if (last_time === "") {
         createCookie("play,0", area + "," + arer_lbe.innerHTML);
+        flag.innerHTML = "已选棋";
         console.log("已选棋");
         return;
     }
 
     console.log("开始比对！");
+    flag.innerHTML = "已选棋";
     console.log(last_time);
 
     let last_area = last_time.split(",")[0];
@@ -106,9 +110,9 @@ function playChess(area) {
     if (last_chess == "连长") { last_chess = 3; }
     if (last_chess == "排长") { last_chess = 2; }
     if (last_chess == "工兵") { last_chess = 1; }
-    if (last_chess == "炸弹") { last_chess = 100; }
-    if (last_chess == "地雷") { last_chess = 101; }
-    if (last_chess == "军旗") { return; }
+    if (this_chess == "炸弹") { this_chess = 100; }
+    if (this_chess == "地雷") { this_chess = 101; }
+    if (this_chess == "军旗") { this_chess = 102; }
 
     if (this_chess == "----") { this_chess = 0; }
     if (this_chess == "司令") { this_chess = 9; }
@@ -122,7 +126,7 @@ function playChess(area) {
     if (this_chess == "工兵") { this_chess = 1; }
     if (this_chess == "炸弹") { this_chess = 100; }
     if (this_chess == "地雷") { this_chess = 101; }
-    if (this_chess == "军旗") { return; }
+    if (this_chess == "军旗") { this_chess = 102; }
 
     let last_ = document.getElementById(last_area);
     let this_ = document.getElementById(this_area);
@@ -144,11 +148,21 @@ function playChess(area) {
     if (last_chess == 1 && this_chess == 101) {
         flag_win = 1;
     }
+    if (this_chess == 102) {
+        flag_win = 2;
+        flag.innerHTML = "夺旗"
+        deleteCookie("play,0");
+    }
     // 更新现在位置
     if (flag_win == 1) {
         this_.innerHTML = last_time.split(",")[1];
+        flag.innerHTML = "胜利";
     } else if (flag_win == 0) {
         this_.innerHTML = "----";
+        flag.innerHTML = "同归于尽";
+    }else if (flag_win == -1) {
+        // this_.innerHTML = last_time.split(",")[1];
+        flag.innerHTML = "失败";
     }
 
     deleteCookie("play,0");
