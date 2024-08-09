@@ -110,9 +110,9 @@ function playChess(area) {
     if (last_chess == "连长") { last_chess = 3; }
     if (last_chess == "排长") { last_chess = 2; }
     if (last_chess == "工兵") { last_chess = 1; }
-    if (this_chess == "炸弹") { this_chess = 100; }
-    if (this_chess == "地雷") { this_chess = 101; }
-    if (this_chess == "军旗") { this_chess = 102; }
+    if (last_chess == "炸弹") { last_chess = 100; }
+    if (last_chess == "地雷") { last_chess = 101; }
+    if (last_chess == "军旗") { last_chess = 102; }
 
     if (this_chess == "----") { this_chess = 0; }
     if (this_chess == "司令") { this_chess = 9; }
@@ -137,20 +137,22 @@ function playChess(area) {
     let flag_win = 0;
     if (last_chess > this_chess) {
         flag_win = 1;
-    }else if (last_chess == this_chess) {
+    } else if (last_chess == this_chess) {
         flag_win = 0;
-    }else {
+    } else {
         flag_win = -1;
     }
-    if (last_chess == 100 && this_chess == 101) {
+    // 炸弹
+    if (last_chess == 100 || this_chess == 100) {
         flag_win = 0;
     }
+    // 地雷
     if (last_chess == 1 && this_chess == 101) {
         flag_win = 1;
     }
     if (this_chess == 102) {
         flag_win = 2;
-        flag.innerHTML = "夺旗"
+        flag.innerHTML = "夺旗";
         deleteCookie("play,0");
     }
     // 更新现在位置
@@ -160,10 +162,38 @@ function playChess(area) {
     } else if (flag_win == 0) {
         this_.innerHTML = "----";
         flag.innerHTML = "同归于尽";
-    }else if (flag_win == -1) {
+    } else if (flag_win == -1) {
         // this_.innerHTML = last_time.split(",")[1];
         flag.innerHTML = "失败";
     }
 
     deleteCookie("play,0");
+}
+
+function refront() {
+    let style = document.getElementById("style");
+
+    console.log(style.innerHTML);
+
+    let size = style.innerHTML.split(" ");
+
+    console.log(size);
+
+    let size_now = size[3]
+
+    console.log(size_now);
+
+    if (size_now == "1px;") {
+        style.innerHTML = ".myChess { font-size: 20px; }";
+    } else {
+        style.innerHTML = ".myChess { font-size: 1px; }";
+    }
+
+    size = style.innerHTML.split(" ");
+
+    console.log(size);
+
+    size_now = size[3]
+
+    console.log(size_now);
 }

@@ -42,14 +42,18 @@
 .container-button{
     display: grid;
     grid:
-        "input-text flag" 65px 
-        / 300px 300px ;
+        "input-text flag front" 65px 
+        / 300px 300px 100px;
     gap: 8px 20px;
 
     justify-content: center;
     align-content: center;
     justify-items: center;
     align-items: center;
+}
+
+.front{
+    display: front;
 }
 
 .input-text {
@@ -130,7 +134,7 @@ a {
     color: #000000;
     font-size: 30px;
     Font-weight: bold;
-    padding: 0px 0px 0px 0px ;
+    padding: 1px 10px 1px 10px ;
     text-decoration: none;
 }
 .行营 {
@@ -147,10 +151,10 @@ a {
     color: #000000;
     font-size: 30px;
     Font-weight: bold;
-    padding: 0px 0px 0px 0px ;
+    padding: 1px 10px 1px 10px ;
     text-decoration: none;
 }
-.大本营 {
+.大本 {
     background: #85392f;
     /* background-image: -webkit-linear-gradient(top, #5696af, #a83e3e);
     background-image: -moz-linear-gradient(top, #43b43f, #333a5e);
@@ -164,7 +168,7 @@ a {
     color: #000000;
     font-size: 30px;
     Font-weight: bold;
-    padding: 0px 0px 0px 0px ;
+    padding: 1px 10px 1px 10px ;
     text-decoration: none;
 }
 .前线 {
