@@ -90,6 +90,12 @@ function playChess(area) {
     let last_time = getCookieValue("play,0")
 
     if (last_time === "") {
+        // 排除军旗和地雷
+        if (arer_lbe.innerHTML == "地雷" || arer_lbe.innerHTML == "军旗") {
+            flag.innerHTML = "不可移动 重选棋";
+            deleteCookie("play,0");
+            return;
+        }
         createCookie("play,0", area + "," + arer_lbe.innerHTML + "," + arer_lbe.name);
         flag.innerHTML = "已选棋";
         console.log("已选棋");
@@ -99,14 +105,19 @@ function playChess(area) {
     console.log("开始比对！");
 
     // 排除重复点击
-    if(last_time.split(",")[0] == area) {
-        flag.innerHTML = "已选棋";
+    if (last_time.split(",")[0] == area) {
+        flag.innerHTML = "重复点击 已选棋";
         return;
     }
     // 自己人跟换
     if (arer_lbe.name == last_time.split(",")[2]) {
+        // 排除军旗和地雷
+        if (arer_lbe.innerHTML == "地雷" || arer_lbe.innerHTML == "军旗") {
+            flag.innerHTML = "不可移动 保持上次";
+            return;
+        }
         createCookie("play,0", area + "," + arer_lbe.innerHTML + "," + arer_lbe.name);
-        flag.innerHTML = "已选棋";
+        flag.innerHTML = "更换 已选棋";
         console.log("已选棋");
         return;
     }
@@ -119,7 +130,7 @@ function playChess(area) {
     let this_area = area;
     let this_chess = arer_lbe.innerHTML;
 
-    if (last_chess == "----") { last_chess = 0; }
+    if (last_chess == " ") { last_chess = 0; }
     if (last_chess == "司令") { last_chess = 9; }
     if (last_chess == "军长") { last_chess = 8; }
     if (last_chess == "师长") { last_chess = 7; }
@@ -133,7 +144,7 @@ function playChess(area) {
     if (last_chess == "地雷") { last_chess = 101; }
     if (last_chess == "军旗") { last_chess = 102; }
 
-    if (this_chess == "----") { this_chess = 0; }
+    if (this_chess == " ") { this_chess = 0; }
     if (this_chess == "司令") { this_chess = 9; }
     if (this_chess == "军长") { this_chess = 8; }
     if (this_chess == "师长") { this_chess = 7; }
@@ -154,6 +165,8 @@ function playChess(area) {
     last_.innerHTML = " ";
     last_.name = "none";
     // 比对棋子
+    console.log(last_chess);
+    console.log(this_chess);
     let flag_win = 0;
     if (last_chess > this_chess) {
         flag_win = 1;
@@ -163,7 +176,14 @@ function playChess(area) {
         flag_win = -1;
     }
     // 炸弹
-    if (last_chess == 100 || this_chess == 100) {
+    if (last_chess == 100) {
+        if (this_chess == 0) {
+            flag_win = 1;
+        } else {
+            flag_win = 0;
+        }
+    }
+    if (this_chess == 100) {
         flag_win = 0;
     }
     // 地雷
@@ -207,7 +227,7 @@ function refront() {
     //     style.innerHTML = ".myChess { font-size: 10px; }";
     // }
 
-    let char_list = ["A", "B", "C", "D", "E","a", "b", "c", "d", "e"];
+    let char_list = ["A", "B", "C", "D", "E", "a", "b", "c", "d", "e"];
     let num_list = ["6", "5", "4", "3", "2", "1"];
     let display_chess = [];
     let none_chess = [];
