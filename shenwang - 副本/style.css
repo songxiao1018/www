@@ -1,0 +1,29 @@
+/* .rectangle {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    float: left;
+} */
+
+/* 设置容器为Flexbox布局 */
+.rectangle-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* 允许换行 */
+    gap: 10px;
+    /* 设置矩形之间的间距 */
+    justify-content: center;
+    /* 水平居中对齐矩形 */
+}
+
+/* 设置矩形的基本样式 */
+.rectangle {
+    width: 100px;
+    /* 矩形的宽度固定 */
+    aspect-ratio: 1 / 1;
+    /* 设置矩形的宽高比为1:1 */
+    background-color: #a239e6;
+    /* 矩形的背景颜色 */
+    margin: 5px;
+    /* 矩形与容器边缘的距离 */
+}

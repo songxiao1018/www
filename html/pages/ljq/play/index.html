@@ -19,13 +19,19 @@
 
         <div class="container-button">
             <div class="input-text">
-                <input type="text" id="id" placeholder="请输入组队代码...">
+                <input type="text" id="id" placeholder="请输入组队代码..."></input>
             </div>
             <div class="flag">
-                <label id="flag" onclick="getChessBoard()">读取阵型！</label>
+                <button class="change-button" id="flag" onclick="getChessBoard()">读取阵型！</button>
             </div>
             <div class="front">
-                <button id="front" onclick="refront()">点击改变字体大小</button>
+                <button class="change-button" id="front" onclick="refront()">翻转全部</button>
+            </div>
+            <div class="change-red">
+                <button class="change-button" id="front" onclick="refrontRed()">翻转红棋</button>
+            </div>
+            <div class="change-black">
+                <button class="change-button" id="front" onclick="refrontBlack()">翻转黑棋</button>
             </div>
         </div>
 

@@ -27,7 +27,7 @@
 .main{
     display: grid;
     grid:
-    "container-button" 50px 
+    "container-button" 150px 
         "chess-board" 800px 
         / 800px;
     gap: 10px 20px;
@@ -42,8 +42,9 @@
 .container-button{
     display: grid;
     grid:
-        "input-text flag front" 65px 
-        / 300px 300px 100px;
+        "input-text flag flag" 65px 
+        "change-red front change-black" 65px
+        / 250px 250px 250px;
     gap: 8px 20px;
 
     justify-content: center;
@@ -52,8 +53,37 @@
     align-items: center;
 }
 
+.change-red {
+    grid-area: change-red;
+}
+
+.change-black {
+    grid-area: change-black;
+}
+
 .front{
     display: front;
+}
+
+.change-button{
+    background: #08ebcd;
+    /* background-image: -webkit-linear-gradient(top, #5696af, #a83e3e);
+    background-image: -moz-linear-gradient(top, #43b43f, #333a5e);
+    background-image: -ms-linear-gradient(top, #1348ac, #74a372);
+    background-image: -o-linear-gradient(top, #2ccf63, #52ad66);
+    background-image: linear-gradient(to bottom, #38b356, #ffffff); */
+    -webkit-border-radius: 20;
+    -moz-border-radius: 20;
+    border-radius: 20px;
+    font-family: Arial;
+    color: #000000;
+    font-size: 30px;
+    Font-weight: bold;
+    width: 230px;
+    height: 50px;
+    padding: 1px 1px 1px 1px ;
+    text-decoration: none;
+
 }
 
 .input-text {

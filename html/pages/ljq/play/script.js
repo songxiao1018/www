@@ -213,20 +213,6 @@ function playChess(area) {
 }
 
 function refront() {
-    // let style = document.getElementById("style");
-
-    // console.log(style.innerHTML);
-
-    // let size = style.innerHTML.split(" ");
-
-    // let size_now = size[3]
-
-    // if (size_now == "10px;") {
-    //     style.innerHTML = ".myChess { font-size: 20px; }";
-    // } else {
-    //     style.innerHTML = ".myChess { font-size: 10px; }";
-    // }
-
     let char_list = ["A", "B", "C", "D", "E", "a", "b", "c", "d", "e"];
     let num_list = ["6", "5", "4", "3", "2", "1"];
     let display_chess = [];
@@ -248,6 +234,61 @@ function refront() {
         } else {
             display_chess[i].style.display = 'none';   // 隐藏文本1
             none_chess[i].style.display = 'inline'; // 显示文本2
+        }
+    }
+}
+
+function refrontRed() {
+    let char_list = ["A", "B", "C", "D", "E", "a", "b", "c", "d", "e"];
+    let num_list = ["6", "5", "4", "3", "2", "1"];
+    let display_chess = [];
+    let none_chess = [];
+    for (let i = 0; i < num_list.length; i++) {
+        for (let j = 0; j < char_list.length; j++) {
+            display_chess.push(document.getElementById(char_list[j] + num_list[i]));
+            none_chess.push(document.getElementById(char_list[j] + num_list[i] + "-none"));
+        }
+    }
+
+    console.log(display_chess);
+    console.log(none_chess);
+
+    for (let i = 0; i < display_chess.length; i++) {
+        if (display_chess[i].name === 'red') {
+            if (display_chess[i].style.display === 'none') {
+                display_chess[i].style.display = 'inline';  // 显示文本1
+                none_chess[i].style.display = 'none';   // 隐藏文本2
+            } else {
+                display_chess[i].style.display = 'none';   // 隐藏文本1
+                none_chess[i].style.display = 'inline'; // 显示文本2
+            }
+        }
+    }
+}
+function refrontBlack() {
+    let char_list = ["A", "B", "C", "D", "E", "a", "b", "c", "d", "e"];
+    let num_list = ["6", "5", "4", "3", "2", "1"];
+    let display_chess = [];
+    let none_chess = [];
+    for (let i = 0; i < num_list.length; i++) {
+        for (let j = 0; j < char_list.length; j++) {
+            display_chess.push(document.getElementById(char_list[j] + num_list[i]));
+            none_chess.push(document.getElementById(char_list[j] + num_list[i] + "-none"));
+        }
+    }
+
+    console.log(display_chess);
+    console.log(none_chess);
+
+    for (let i = 0; i < display_chess.length; i++) {
+        if (display_chess[i].name === 'black') {
+            if (display_chess[i].style.display === 'none') {
+                display_chess[i].style.display = 'inline';  // 显示文本1
+                none_chess[i].style.display = 'none';   // 隐藏文本2
+            } else {
+                display_chess[i].style.display = 'none';   // 隐藏文本1
+                none_chess[i].style.display = 'inline'; // 显示文本2
+            }
         }
     }
 }
