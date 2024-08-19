@@ -61,4 +61,4 @@ def connect_test():
 
 if __name__ == '__main__':
     server_init()
-    app.run(host='0.0.0.0', debug=True, port="4000")  # 开启调试模式，实际部署时请关闭
+    app.run(host='0.0.0.0', debug=True, port="4040")  # 开启调试模式，实际部署时请关闭
