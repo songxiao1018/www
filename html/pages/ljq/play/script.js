@@ -73,8 +73,13 @@ function getChessBoard() {
         } else {
             board_chess[i].name = group;
             board_chess[i].innerHTML = chess;
+
+            chess_none_id = board_chess[i].id + "-none";
+            document.getElementById(chess_none_id).name = group;
         }
     }
+
+    console.log(board_chess[0].id)
 
 }
 
@@ -129,34 +134,36 @@ function playChess(area) {
     let last_chess = last_time.split(",")[1];
     let this_area = area;
     let this_chess = arer_lbe.innerHTML;
+    let this_c = ""
+    let last_c = ""
 
-    if (last_chess == " ") { last_chess = 0; }
-    if (last_chess == "司令") { last_chess = 9; }
-    if (last_chess == "军长") { last_chess = 8; }
-    if (last_chess == "师长") { last_chess = 7; }
-    if (last_chess == "旅长") { last_chess = 6; }
-    if (last_chess == "团长") { last_chess = 5; }
-    if (last_chess == "营长") { last_chess = 4; }
-    if (last_chess == "连长") { last_chess = 3; }
-    if (last_chess == "排长") { last_chess = 2; }
-    if (last_chess == "工兵") { last_chess = 1; }
-    if (last_chess == "炸弹") { last_chess = 100; }
-    if (last_chess == "地雷") { last_chess = 101; }
-    if (last_chess == "军旗") { last_chess = 102; }
+    if (last_chess == " ") { last_c = 0; }
+    if (last_chess == "司令") { last_c = 9; }
+    if (last_chess == "军长") { last_c = 8; }
+    if (last_chess == "师长") { last_c = 7; }
+    if (last_chess == "旅长") { last_c = 6; }
+    if (last_chess == "团长") { last_c = 5; }
+    if (last_chess == "营长") { last_c = 4; }
+    if (last_chess == "连长") { last_c = 3; }
+    if (last_chess == "排长") { last_c = 2; }
+    if (last_chess == "工兵") { last_c = 1; }
+    if (last_chess == "炸弹") { last_c = 100; }
+    if (last_chess == "地雷") { last_c = 101; }
+    if (last_chess == "军旗") { last_c = 102; }
 
-    if (this_chess == " ") { this_chess = 0; }
-    if (this_chess == "司令") { this_chess = 9; }
-    if (this_chess == "军长") { this_chess = 8; }
-    if (this_chess == "师长") { this_chess = 7; }
-    if (this_chess == "旅长") { this_chess = 6; }
-    if (this_chess == "团长") { this_chess = 5; }
-    if (this_chess == "营长") { this_chess = 4; }
-    if (this_chess == "连长") { this_chess = 3; }
-    if (this_chess == "排长") { this_chess = 2; }
-    if (this_chess == "工兵") { this_chess = 1; }
-    if (this_chess == "炸弹") { this_chess = 100; }
-    if (this_chess == "地雷") { this_chess = 101; }
-    if (this_chess == "军旗") { this_chess = 102; }
+    if (this_chess == " ") { this_c = 0; }
+    if (this_chess == "司令") { this_c = 9; }
+    if (this_chess == "军长") { this_c = 8; }
+    if (this_chess == "师长") { this_c = 7; }
+    if (this_chess == "旅长") { this_c = 6; }
+    if (this_chess == "团长") { this_c = 5; }
+    if (this_chess == "营长") { this_c = 4; }
+    if (this_chess == "连长") { this_c = 3; }
+    if (this_chess == "排长") { this_c = 2; }
+    if (this_chess == "工兵") { this_c = 1; }
+    if (this_chess == "炸弹") { this_c = 100; }
+    if (this_chess == "地雷") { this_c = 101; }
+    if (this_chess == "军旗") { this_c = 102; }
 
     let last_ = document.getElementById(last_area);
     let this_ = document.getElementById(this_area);
@@ -164,33 +171,36 @@ function playChess(area) {
     // 清空原始位置
     last_.innerHTML = " ";
     last_.name = "none";
+    document.getElementById(last_area + "-none").name = "none";
+
+
     // 比对棋子
-    console.log(last_chess);
-    console.log(this_chess);
+    console.log(last_c);
+    console.log(this_c);
     let flag_win = 0;
-    if (last_chess > this_chess) {
+    if (last_c > this_c) {
         flag_win = 1;
-    } else if (last_chess == this_chess) {
+    } else if (last_c == this_c) {
         flag_win = 0;
     } else {
         flag_win = -1;
     }
     // 炸弹
-    if (last_chess == 100) {
-        if (this_chess == 0) {
+    if (last_c == 100) {
+        if (this_c == 0) {
             flag_win = 1;
         } else {
             flag_win = 0;
         }
     }
-    if (this_chess == 100) {
+    if (this_c == 100) {
         flag_win = 0;
     }
     // 地雷
-    if (last_chess == 1 && this_chess == 101) {
+    if (last_c == 1 && this_c == 101) {
         flag_win = 1;
     }
-    if (this_chess == 102) {
+    if (this_c == 102) {
         flag_win = 2;
         flag.innerHTML = "夺旗";
         deleteCookie("play,0");
@@ -199,13 +209,16 @@ function playChess(area) {
     if (flag_win == 1) {
         this_.innerHTML = last_time.split(",")[1];
         this_.name = last_time.split(",")[2];
+        document.getElementById(this_area + "-none").name = last_time.split(",")[2];
         flag.innerHTML = "胜利";
     } else if (flag_win == 0) {
         this_.innerHTML = " ";
         this_.name = "none";
+        document.getElementById(this_area + "-none").name = "none";
         flag.innerHTML = "同归于尽";
     } else if (flag_win == -1) {
         // this_.innerHTML = last_time.split(",")[1];
+        // document.getElementById(this_area + "-none").name = "none";
         flag.innerHTML = "失败";
     }
 
@@ -250,9 +263,6 @@ function refrontRed() {
         }
     }
 
-    console.log(display_chess);
-    console.log(none_chess);
-
     for (let i = 0; i < display_chess.length; i++) {
         if (display_chess[i].name === 'red') {
             if (display_chess[i].style.display === 'none') {
@@ -277,9 +287,6 @@ function refrontBlack() {
         }
     }
 
-    console.log(display_chess);
-    console.log(none_chess);
-
     for (let i = 0; i < display_chess.length; i++) {
         if (display_chess[i].name === 'black') {
             if (display_chess[i].style.display === 'none') {
@@ -292,3 +299,37 @@ function refrontBlack() {
         }
     }
 }
+
+
+// var xhr = new XMLHttpRequest();
+// xhr.open("POST", "http://127.0.0.1:4000/connect_test", true);
+// xhr.setRequestHeader("Content-Type", "application/json");
+
+// xhr.onreadystatechange = function() {
+//   if (xhr.readyState == 4 && xhr.status == 200) {
+//     // 处理响应数据
+//     console.log(xhr.responseText);
+//   }
+// };
+
+// var data = { key1: "value1", key2: "value2" };
+// xhr.send(JSON.stringify(data));
+
+// var url = "http://127.0.0.1:4000/connect_test";
+// var httpRequest = new XMLHttpRequest();
+// httpRequest.open('POST', url, true);
+// httpRequest.setRequestHeader("Content-type", "application/json");
+// var obj = {
+//     "username": "mkii",
+//     "password": "1234"
+// };
+
+// httpRequest.send(JSON.stringify(obj));
+
+// // 响应后的回调函数
+// httpRequest.onreadystatechange = function () {
+//     if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+//         var json = httpRequest.responseText;
+//         console.log(json);
+//     }
+// };

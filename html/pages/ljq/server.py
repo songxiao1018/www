@@ -39,6 +39,8 @@ def server_init(db_path='server.db'):
 
 @app.route('/connect_test', methods=['POST'])
 def connect_test():
+    # 打印接收数据
+    print(request.json)
     return jsonify({"status": "连接成功！"}), 200
 
 

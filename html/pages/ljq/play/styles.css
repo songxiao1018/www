@@ -1,20 +1,7 @@
 .chess-board {
     display: grid;
     grid:
-        "e1 d1 c1 b1 a1" 50px 
-        "e2 d2 c2 b2 a2" 50px 
-        "e3 d3 c3 b3 a3" 50px 
-        "e4 d4 c4 b4 a4" 50px 
-        "e5 d5 c5 b5 a5" 50px 
-        "e6 d6 c6 b6 a6" 50px 
-        "A0 B0 C0 D0 E0" 50px 
-        "A6 B6 C6 D6 E6" 50px 
-        "A5 B5 C5 D5 E5" 50px 
-        "A4 B4 C4 D4 E4" 50px 
-        "A3 B3 C3 D3 E3" 50px 
-        "A2 B2 C2 D2 E2" 50px 
-        "A1 B1 C1 D1 E1" 50px 
-        / 150px 150px 150px 150px 150px;
+        "e1 d1 c1 b1 a1" 50px "e2 d2 c2 b2 a2" 50px "e3 d3 c3 b3 a3" 50px "e4 d4 c4 b4 a4" 50px "e5 d5 c5 b5 a5" 50px "e6 d6 c6 b6 a6" 50px "A0 B0 C0 D0 E0" 50px "A6 B6 C6 D6 E6" 50px "A5 B5 C5 D5 E5" 50px "A4 B4 C4 D4 E4" 50px "A3 B3 C3 D3 E3" 50px "A2 B2 C2 D2 E2" 50px "A1 B1 C1 D1 E1" 50px / 150px 150px 150px 150px 150px;
     gap: 10px 20px;
 
     justify-content: center;
@@ -24,12 +11,10 @@
 
 }
 
-.main{
+.main {
     display: grid;
     grid:
-    "container-button" 150px 
-        "chess-board" 800px 
-        / 800px;
+        "container-button" 150px "chess-board" 800px / 800px;
     gap: 10px 20px;
 
     justify-content: center;
@@ -39,12 +24,10 @@
 
 }
 
-.container-button{
+.container-button {
     display: grid;
     grid:
-        "input-text flag flag" 65px 
-        "change-red front change-black" 65px
-        / 250px 250px 250px;
+        "input-text flag flag" 65px "change-red front change-black" 65px / 250px 250px 250px;
     gap: 8px 20px;
 
     justify-content: center;
@@ -61,11 +44,11 @@
     grid-area: change-black;
 }
 
-.front{
+.front {
     display: front;
 }
 
-.change-button{
+.change-button {
     background: #08ebcd;
     /* background-image: -webkit-linear-gradient(top, #5696af, #a83e3e);
     background-image: -moz-linear-gradient(top, #43b43f, #333a5e);
@@ -81,7 +64,7 @@
     Font-weight: bold;
     width: 230px;
     height: 50px;
-    padding: 1px 1px 1px 1px ;
+    padding: 1px 1px 1px 1px;
     text-decoration: none;
 
 }
@@ -129,26 +112,32 @@ label {
     margin-top: 5px;
     font-family: Arial;
     color: #000000;
-    font-size: 20px; 
+    font-size: 20px;
     border-radius: 4px;
 }
 
 /* 无效果按钮，保持默认样式 */
 .color-button[name="none"] {
-    color: rgb(0, 0, 0);        /* 文本颜色为白色 */
-    background-color: rgb(255, 255, 255); /* 背景颜色为红色 */
+    color: rgb(0, 0, 0);
+    /* 文本颜色为白色 */
+    background-color: rgb(255, 255, 255);
+    /* 背景颜色为红色 */
 }
 
 /* 红色按钮，文本和背景颜色 */
 .myChess[name="red"] {
-    color: white;        /* 文本颜色为白色 */
-    background-color: red; /* 背景颜色为红色 */
+    color: white;
+    /* 文本颜色为白色 */
+    background-color: red;
+    /* 背景颜色为红色 */
 }
 
 /* 黑色按钮，文本和背景颜色 */
 .myChess[name="black"] {
-    color: white;        /* 文本颜色为白色 */
-    background-color: black; /* 背景颜色为黑色 */
+    color: white;
+    /* 文本颜色为白色 */
+    background-color: black;
+    /* 背景颜色为黑色 */
 }
 
 
@@ -158,8 +147,8 @@ body {
 }
 
 a {
-    color:rgb(255, 255, 255);
-    text-decoration:none;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
 }
 
 .header,
@@ -186,9 +175,16 @@ a {
     Font-weight: bold;
     width: 150px;
     height: 50px;
-    padding: 1px 1px 1px 1px ;
+    padding: 1px 1px 1px 1px;
     text-decoration: none;
+
+    /* background-image: url('../img/svg.svg'); */
+    /* background-size: cover; */
+    /* 根据需要调整背景图片的大小 */
+    /* background-repeat: no-repeat; */
+    /* 确保图片不会重复 */
 }
+
 .行营 {
     background: #ebd408;
     /* background-image: -webkit-linear-gradient(top, #5696af, #a83e3e);
@@ -205,9 +201,10 @@ a {
     Font-weight: bold;
     width: 150px;
     height: 50px;
-    padding: 1px 1px 1px 1px ;
+    padding: 1px 1px 1px 1px;
     text-decoration: none;
 }
+
 .大本 {
     background: #85392f;
     /* background-image: -webkit-linear-gradient(top, #5696af, #a83e3e);
@@ -224,9 +221,10 @@ a {
     Font-weight: bold;
     width: 150px;
     height: 50px;
-    padding: 1px 1px 1px 1px ;
+    padding: 1px 1px 1px 1px;
     text-decoration: none;
 }
+
 .前线 {
     background: #000000;
     width: 80%;
@@ -241,9 +239,10 @@ a {
     font-family: Arial;
     color: #000000;
     font-size: 20px;
-    padding: 15px 15px 15px 15px ;
+    padding: 15px 15px 15px 15px;
     text-decoration: none;
 }
+
 .大山 {
     background: #ffffff;
     width: 80%;
@@ -258,7 +257,7 @@ a {
     font-family: Arial;
     color: #000000;
     font-size: 20px;
-    padding: 15px 15px 15px 15px ;
+    padding: 15px 15px 15px 15px;
     text-decoration: none;
 }
 
