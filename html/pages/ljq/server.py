@@ -1,11 +1,13 @@
 # python
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, make_response
+from flask_cors import CORS
 import sqlite3
 import time
 import random
 from contextlib import closing
 
 app = Flask(__name__)
+CORS(app)  # 初始化CORS
 
 
 def server_init(db_path='server.db'):
@@ -39,9 +41,22 @@ def server_init(db_path='server.db'):
 
 @app.route('/connect_test', methods=['POST'])
 def connect_test():
-    # 打印接收数据
+    if request.method == 'OPTIONS':
+        # 如果是预检请求，则返回适当的响应头
+        return jsonify({"message": "OK"}), 200
+    
+    # 打印接收信息
     print(request.json)
-    return jsonify({"status": "连接成功！"}), 200
+    
+    # 创建响应
+    data = {
+        "message": "This is your resource.",
+        "data" : request.json
+    }
+    response = make_response(jsonify(data), 200)
+
+    # 如果是实际请求，则处理请求
+    return response
 
 
 if __name__ == '__main__':

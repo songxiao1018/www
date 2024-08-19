@@ -300,36 +300,21 @@ function refrontBlack() {
     }
 }
 
+var url = "http://127.0.0.1:4000/connect_test";
+var httpRequest = new XMLHttpRequest();
+httpRequest.open('POST', url, true);
+httpRequest.setRequestHeader("Content-type", "application/json");
+var obj = {
+    "username": "mkii",
+    "password": "1234"
+};
 
-// var xhr = new XMLHttpRequest();
-// xhr.open("POST", "http://127.0.0.1:4000/connect_test", true);
-// xhr.setRequestHeader("Content-Type", "application/json");
+httpRequest.send(JSON.stringify(obj));
 
-// xhr.onreadystatechange = function() {
-//   if (xhr.readyState == 4 && xhr.status == 200) {
-//     // 处理响应数据
-//     console.log(xhr.responseText);
-//   }
-// };
-
-// var data = { key1: "value1", key2: "value2" };
-// xhr.send(JSON.stringify(data));
-
-// var url = "http://127.0.0.1:4000/connect_test";
-// var httpRequest = new XMLHttpRequest();
-// httpRequest.open('POST', url, true);
-// httpRequest.setRequestHeader("Content-type", "application/json");
-// var obj = {
-//     "username": "mkii",
-//     "password": "1234"
-// };
-
-// httpRequest.send(JSON.stringify(obj));
-
-// // 响应后的回调函数
-// httpRequest.onreadystatechange = function () {
-//     if (httpRequest.readyState == 4 && httpRequest.status == 200) {
-//         var json = httpRequest.responseText;
-//         console.log(json);
-//     }
-// };
+// 响应后的回调函数
+httpRequest.onreadystatechange = function () {
+    if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+        var json = httpRequest.responseText;
+        console.log(json);
+    }
+};
