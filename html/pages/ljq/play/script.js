@@ -300,7 +300,7 @@ function refrontBlack() {
     }
 }
 
-var url = "http://127.0.0.1:4040/connect_test";
+var url = "http://47.100.46.5:4040/connect_test";
 var httpRequest = new XMLHttpRequest();
 httpRequest.open('POST', url, true);
 httpRequest.setRequestHeader("Content-type", "application/json");
