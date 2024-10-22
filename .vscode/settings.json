@@ -1,0 +1,22 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Enabled",
+                "ssl": {
+                    "ca": "D:\\PycharmProject\\mingchao\\Tencent_MySQL\\TencentDB-SSL-CA\\ca.pem"
+                }
+            },
+            "previewLimit": 50,
+            "server": "sh-cynosdbmysql-grp-n65ean1y.sql.tencentcdb.com",
+            "port": 25176,
+            "driver": "MySQL",
+            "name": "Tencent",
+            "group": "1",
+            "database": "test",
+            "username": "my_app",
+            "askForPassword": true
+        }
+    ]
+}
