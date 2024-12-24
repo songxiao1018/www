@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>公务员职位筛选器</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="/logo.png">
+    <!-- <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
+    <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <h1>公务员职位筛选器</h1>
+    </header>
+    
+    <!-- xls文档上传区 -->
+     <div class="container">
+        <div class="input-container">
+            <input type="file" id="file" accept=".xls,.xlsx">
+            <label for="file" class="input-label">上传xls文件</label>
+            <button id="submit" class="submit-button">提交</button>
+            <div class="output-container">
+                <textarea id="output" readonly></textarea>
+            </div>
+            <div class="statistics-container">
+                <div class="statistics-item">
+                    <span class="statistics-label">职位总数：</span>
+                    <span id="totalJobs">0</span>
+                </div>
+                <div class="statistics-item">
+                    <span class="statistics-label">已筛选职位数：</span>
+                    <span id="filteredJobs">0</span>
+                </div>
+            </div>
+        </div>
+     </div>
+
+
+
+    <footer class="footer">
+        <p>版权所有 &copy; 2023 晓之梦</p>
+        <p> <a rel="nofollow" href="http://beian.miit.gov.cn/publish/query/indexFirst.action" target="_blank">苏ICP备2022036199号</a></p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+</body>
+</html>

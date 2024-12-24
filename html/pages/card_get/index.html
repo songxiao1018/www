@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>抽卡模拟器</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="/logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="header">
+        <div class="title">Army Chess</div>
+    </div>
+
+
+    <div class="main">
+
+        <div class="container-button">
+            <div class="input-text">
+                <input type="text" id="id" placeholder="请输入组队代码..."></input>
+            </div>
+            <div class="flag">
+                <button class="change-button" id="flag" onclick="getChessBoard()">读取阵型！</button>
+            </div>
+            <div class="front">
+                <button class="change-button" id="front" onclick="refront()">翻转全部</button>
+            </div>
+            <div class="change-red">
+                <button class="change-button" id="front" onclick="refrontRed()">翻转红棋</button>
+            </div>
+            <div class="change-black">
+                <button class="change-button" id="front" onclick="refrontBlack()">翻转黑棋</button>
+            </div>
+        </div>
+
+        <div class="chess-board">
+            <div class="A0 前线">
+
+            </div>
+        </div>
+
+        <!-- <style id="style">.myChess {}</style> -->
+
+
+        <footer class="footer">
+            <p>版权所有 &copy; 2023 晓之梦</p>
+            <p> <a rel="nofollow" href="http://beian.miit.gov.cn/publish/query/indexFirst.action"
+                    target="_blank">苏ICP备2022036199号</a></p>
+        </footer>
+
+        <script src="script.js"></script>
+</body>
+
+</html>

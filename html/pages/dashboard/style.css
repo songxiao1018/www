@@ -1,0 +1,81 @@
+:root {
+    --primary-color: #1a237e;
+    --secondary-color: #303f9f;
+    --panel-bg: #ffffff;
+    --border-color: #e0e0e0;
+    --header-bg: #f5f5f5;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft YaHei", sans-serif;
+    background-color: #eceff1;
+    min-height: 100vh;
+}
+
+.dashboard {
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.dashboard-header {
+    text-align: center;
+    padding: 10px;
+}
+
+.dashboard-header h1 {
+    margin: 0;
+    color: var(--primary-color);
+    font-size: 24px;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 1fr;
+    gap: 20px;
+    flex: 1;
+}
+
+.panel {
+    background: var(--panel-bg);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.panel-large {
+    grid-column: 1 / -1;
+}
+
+.panel-header {
+    background: var(--header-bg);
+    padding: 10px 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.panel-header h2 {
+    margin: 0;
+    font-size: 18px;
+    color: var(--primary-color);
+}
+
+.panel-content {
+    padding: 15px;
+    overflow: auto;
+}
+
+/* 响应式调整 */
+@media screen and (max-width: 1600px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
